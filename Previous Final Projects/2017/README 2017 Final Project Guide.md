@@ -7,7 +7,7 @@ Project Title | Team | Team Members | Brief Project Description
 **Chemical Dose Simplification** | MIC | Yuhao Du, Simiao Wang, Yinnge Wang, Lingzi Xia | Calculation behind minor loss-driven linearity in AguaClara Chemical Dose Controllers
 **Feasibility of AguaClara Plants in Puerto Rico** | Flamingos | Ben Diskin, Clare O'Conner, Thomas Suesser | Data consolidation of water treatment systems in Puerto Rico, emphasis on how AguaClara can fit into the island in the future
 **Flouride Waste Stream Management for Drinking Water Treatment** | Atlantis | Azhir Barodawala, Congyue Wu, Michael Zarecor | Analysis of settled solids after flouride treatment
-**Fusion 360 Sedimentation Tank Design | Major Losses (Trademark)** | Matthew Cimini, Christopher Galatino, Ben Gassaway | Parametrization of an AguaClara sedimentation tank in the Autodesk program Fusion 360
+**Fusion 360 Sedimentation Tank Design** | Major Losses (Trademark) | Matthew Cimini, Christopher Galatino, Ben Gassaway | Parametrization of an AguaClara sedimentation tank in the Autodesk program Fusion 360
 **PVC Pipe Flocculators** | Penguins | Gabriella Blake, Kyle Glavey-Weiss, Joeseph Pinnola-Vizza | Hydraulic analysis of flocculation within PVC pipes, focused on energy dissipation geometry
 **Water Supply and Treatment in Suriqui, Bolivia** | juansemails | Helena Harris, Jennifer Jackson, John Sulich | Same project as Sssssnakes, focused more on water treatment implementation details
 **Water Tower for Gadhyampurva** | Applesauce | Adriana Guzmán, Natalie Mottl, Fawzia Tarannum | Filtration and disinfection implementation in a village in India
