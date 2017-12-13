@@ -6,3 +6,6 @@ of the project.
 
 The project folders themselves each contain a final report and a final presentation, in addition to any other files submitted
 by the group. 
+
+Reports will be named "**Team_Name_Project_Title_Report**," presentations will be named "**Team_Name_Project_Title_Presentation**,"
+and auxilliary files will remain whatever their creators named them.
