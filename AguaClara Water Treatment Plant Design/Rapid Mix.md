@@ -1,7 +1,7 @@
 ```python
 # %% importing
 from aide_design.play import *
-a=2*5
+a=2*6
 print(a)
 ```
 
