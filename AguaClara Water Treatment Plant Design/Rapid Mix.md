@@ -1,8 +1,8 @@
 ```python
 # %% importing
 from aide_design.play import *
-a=2*6
-print(a)
+a=200/100000
+print(a*100)
 ```
 
 # Rapid Mix
