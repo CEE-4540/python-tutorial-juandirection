@@ -135,7 +135,7 @@ $$d_P = \left( \frac{6MW}{\pi \rho_P N_A} \right)^{\frac{1}{3}}$$
 
 $$D_{Diffusion} = \frac{k_B T}{3 \pi \mu} \left( \frac{\pi \rho_P N_A}{6 M W} \right)^{\frac{1}{3}}$$
 
-$$M W = \rho_P V_P N_A$$
+$$M W = \rho_P \rlap{-}V_P N_A$$
 
 
 ### Turbulent Mixing so that Molecular Diffusion can finish the job
@@ -179,22 +179,22 @@ k_v \eta_K = 0.125
 $$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{d_0} \right)^{3 - D_{Fractal}}$$
 
 $$\begin{array}{l}
-n_{Floc} = \frac{C_{Floc}}{\rlap{--} V_{Floc} \rho_{Floc}} = \frac{\phi _{Floc}}{\rlap{--} V_{Floc}}
+n_{Floc} = \frac{C_{Floc}}{\rlap{-} V_{Floc} \rho_{Floc}} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}}
 \\
-n_{Floc_0} = \frac{\phi_{Floc_0}}{\rlap{--} V_{Floc_0}}
+n_{Floc_0} = \frac{\phi_{Floc_0}}{\rlap{-} V_{Floc_0}}
 \\
-n_{Floc} = \frac{\phi_{Floc}}{\rlap{--} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{\rlap{--} V_{Floc}}
+n_{Floc} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}} = \frac{\phi_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{\rlap{-} V_{Floc}}
 \\
-= n_{Floc_0} \frac{\rlap{--} V_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{ V_{Floc}}
+= n_{Floc_0} \frac{\rlap{-} V_{Floc_0} \left( \frac{d_{Floc}}{d_0} \right)^{3 - D_{Fractal}}}{ \rlap{-} V_{Floc}}
 \\
 = n_{Floc_0} \left( \frac{d_0}{d_{Floc}} \right)^3 \left( \frac{d_{Floc}}{d_0} \right)^{3 - {D_{Fractal}}}
 \\
 n_{Floc} = n_{Floc_0} \left( \frac{d_0}{d_{Floc}} \right)^{D_{Fractal}}
 \end{array}$$
 
-$$\rlap{--} V_P = \frac{\pi}{6} d_P^3$$
+$$\rlap{-} V_P = \frac{\pi}{6} d_P^3$$
 
-$$n_P = \frac{C_P}{\rlap{--} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
 
 $$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
 
@@ -252,13 +252,13 @@ $$L_{Diff_{NC}} \approx \sqrt{ \frac{k_B T}{3 \pi \,\nu \rho_{NC} \, d_{NC} G}} 
 
 
 ### Collision Rates
-$${\rlap{--} V_{\rm{Cleared}}} \propto \pi d_{Clay} L_{Diff_{NC}} v_r t$$
+$${\rlap{-} V_{\rm{Cleared}}} \propto \pi d_{Clay} L_{Diff_{NC}} v_r t$$
 
 $$t_c = \frac{\Lambda_{NC}^3}{\pi d_{Clay} L_{Diff_{NC} v_r}}$$
 
 $$v_r \approx \Lambda_{Clay} G$$
 
-$$\rlap{--} V_{Occupied} = \Lambda_{NC}^3$$
+$$\rlap{-} V_{Occupied} = \Lambda_{NC}^3$$
 
 $$t_c = \frac{\Lambda_{NC}^3}{\pi d_{Clay} L_{Diff_{NC}} \Lambda_{Clay} G}$$
 
