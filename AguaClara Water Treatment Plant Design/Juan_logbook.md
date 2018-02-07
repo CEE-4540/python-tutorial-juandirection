@@ -9,12 +9,13 @@ This file will contain weekly updates into my work. All changes will be pushed t
 1. Looked into how to handle extra slides, input from Cynthia and Zoe. Small example ready
 1. Simplified a few slides- notably one on Darcy-Weisbach
 1. Began to transfer equations in the powerpoints to LaTeX from MathType
-  - `Flow Control and Measurement` and  `Rapid Mix` are done and uploaded to my branch.
-  - I've only got 14 more days left of MathType
+    - `Flow Control and Measurement` and  `Rapid Mix` are done and uploaded to my branch.
+    - Looked into changing the LaTeX math font, as I like the MathType font far more. I wasn't able to find any good options in a couple hours of searching
+    - I've only got 14 more days left of MathType
 
 ### To Do
 1. Finish transferring all equations to IguanaTeX before MathType runs out
 1. Once all equations are transferred, branch point (my preference bolded):
-  - **Update/simplify/clarify slides,** OR
-  - Begin to create summary sheets for each unit process/course topic OR
-  - Look into skeleton structure for textbook (equation numbering and citations)
+    - **Update/simplify/clarify slides,** OR
+    - Begin to create summary sheets for each unit process/course topic OR
+    - Look into skeleton structure for textbook (equation numbering and citations)
