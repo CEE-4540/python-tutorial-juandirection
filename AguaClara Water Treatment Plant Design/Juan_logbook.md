@@ -2,7 +2,7 @@
 
 This file will contain weekly updates into my work. All changes will be pushed to the `Juan_class_book_work` branch. Every week (the day depends on my work schedule that week), I will send Monroe an email containing a link to this file's page on GitHub in addition to supplementary material. For example, this first week I will send him the example of the 'extra' slides for his viewing pleasure (or displeasure).
 
-## First Progress report: 2/7/18
+## First Progress report: Arrived in Argentina 2/7/18
 
 ### Done
 1. Installed and played with atom until comfortable
@@ -19,3 +19,16 @@ This file will contain weekly updates into my work. All changes will be pushed t
     - **Update/simplify/clarify slides,** OR
     - Begin to create summary sheets for each unit process/course topic OR
     - Look into skeleton structure for textbook (equation numbering and citations)
+
+
+## Second Progress report: Last day in Argentina 2/14/18
+
+### Done
+1. Completed transferring equations to LaTeX from MathType in `Flocculation Model`. Took more time than the previous topics due to its heaftier equation volume and the following bullet.
+1. Began to understand the huge difficulty with work-life-family balance. As I work and my grandpa just looks at me somewhat sadly. Short-term productivity suffered.
+
+### To Do
+1. Finish transferring equations for `Flocculation Design`, `Sedimentation`, and `Filtration` powerpoints, along with the scattered extras.
+    - `Sedimentation` and `Filtration` powerpoints don't appear to be in the `CEE_4540` repo. I'll take them from the 4540 syllabus. I imagine Monroe didn't change them too much since last semester.
+    - I will need to purchase Mathtype, or download another free trial. I can use another email and wipe Mathtype from my computer before re-installing? I'll try that
+2. Look into changing the font color on IguanaTeX. Learn more about LaTeX and IguanaTeX in general.
