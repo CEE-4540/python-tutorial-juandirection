@@ -32,3 +32,10 @@ This file will contain weekly updates into my work. All changes will be pushed t
     - `Sedimentation` and `Filtration` powerpoints don't appear to be in the `CEE_4540` repo. I'll take them from the 4540 syllabus. I imagine Monroe didn't change them too much since last semester.
     - I will need to purchase Mathtype, or download another free trial. I can use another email and wipe Mathtype from my computer before re-installing? I'll try that
 2. Look into changing the font color on IguanaTeX. Learn more about LaTeX and IguanaTeX in general.
+
+
+## Third Progress report: Last day in Abu Dhabi?
+
+### Done
+1. Figured out how to add color to the IguanaTeX equations. Not too tough, but it took longer than I would have liked.
+2. Finished transferring equations for `Flocculation Model` and `Sedimentation`
