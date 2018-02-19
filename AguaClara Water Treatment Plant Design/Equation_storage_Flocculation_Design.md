@@ -92,6 +92,7 @@ $$\nu \bar G^2 = \frac{K_e}{2 H_e} \left( \frac{Q}{W S} \right)^3$$
 
 $$\bar G = \sqrt{ \frac{K_e}{2 \nu H_e} \left( \frac{Q}{W S} \right)^3}$$
 
+**Off-slide**
 $$S = \left[ \frac{K_{Exp}}{2 \Pi_{HS_{Max}}\bar \varepsilon } \left( \frac{Q}{W} \right)^3 \right]^\frac{1}{4}$$
 
 
@@ -160,6 +161,7 @@ $$\nu \bar G^2 = \frac{K_e}{2 \Pi_{HS} D_{Pipe}} \left( \frac{4 Q}{\pi D_{Pipe}^
 
 $$D_{Pipe} = \left[ \frac{K_e}{2 \Pi_{HS} \nu \bar G^2} \left( \frac{4 Q}{\pi} \right)^3 \right]^\frac{1}{7}$$
 
+**Off-slide**
 $$\bar \varepsilon = \left( \frac{g H L_{Floc}}{\alpha_\varepsilon ^\frac{1}{6} \psi_{Floc}} \right)^\frac{3}{2}$$
 
 $$S = \left[ \frac{K_{Exp}}{2 \Pi_{HS_{Max}} \bar \varepsilon} \left( \frac{Q}{W} \right)^3 \right]^\frac{1}{4}$$
@@ -200,8 +202,14 @@ $$\nu \bar G^2 = \frac{K_e}{2 D_{Pipe}} \left( \frac{4 Q}{\pi D_{Pipe}^2} \right
 
 $$D_{Pipe} = \left[ \frac{K_e}{2 \nu \bar G^2} \left( \frac{4 Q}{\pi} \right)^3 \right]^\frac{1}{7}$$
 
+**Off-slide**
+$$\bar \varepsilon = \left( \frac{g H L_{Floc}}{\alpha_\varepsilon ^\frac{1}{6} \psi_{Floc}} \right)^\frac{3}{2}$$
+
+$$S = \left[ \frac{K_{Exp}}{2 \Pi_{HS_{Max}} \bar \varepsilon} \left( \frac{Q}{W} \right)^3 \right]^\frac{1}{4}$$
+
 
 ### Reflection Questions
+**Off-slide**
 $$\bar G \theta_e = \sqrt{ \frac{H_e K_e Q}{2 \nu W S}}$$
 
 $$\Pi_{\bar G}^{G_{Max}} = \sqrt{ \Pi_{\bar \epsilon}^{\epsilon_{Max}} }  = \sqrt{2}$$
@@ -222,8 +230,6 @@ V_{r_2} =  + \frac{Gr_2}{2}
 
 
 ### Estimating the ratio
-$$\varepsilon_{Max} \cong 2 \Pi_{JetPlane}^3 \frac{V_{Jet}^2}{2} \frac{V_{Jet}}{S_{Jet}}$$
-
 $$\varepsilon_{Max} \frac{ \left( \Pi_{JetPlane} V_{Jet} \right)^3}{S_{Jet}}$$
 
 $$\Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\varepsilon_{Max}}{\bar \varepsilon}$$
@@ -240,8 +246,7 @@ $$\theta_B = \frac{H}{\bar V}$$
 
 $$\Pi_{\bar \epsilon}^{\epsilon_{Max}} = \frac{\Pi_{JetPlane}^3}{\Pi_{VCBaffle}^4} \frac{2 H_e}{K_e S}$$
 
-$$\alpha_\varepsilon = \frac{1}{S \Pi_{VCBaffle}} \left( \frac{\Pi_{PlaneJet} \bar V}{\Pi_{VCBaffle}} \right)^3 \frac{2 H}{K_B \bar V^3}$$
-
+**Off-slide**
 $$\begin{array}{l}
 K_B = \left( \frac{1}{\Pi_{vc}^2} - 1 \right)^2
 \\
@@ -252,6 +257,9 @@ K_B = \left( \frac{1}{\Pi_{vc}^2} - 1 \right)^2
 \Pi_{VCBaffle}^2 = \frac{1}{K_B + 2 \sqrt{K_B}  + 1}
 \end{array}$$
 
+$$\alpha_\varepsilon = \frac{1}{S \Pi_{VCBaffle}} \left( \frac{\Pi_{PlaneJet} \bar V}{\Pi_{VCBaffle}} \right)^3 \frac{2 H}{K_B \bar V^3}$$
+
+$$\varepsilon_{Max} \cong 2 \Pi_{JetPlane}^3 \frac{V_{Jet}^2}{2} \frac{V_{Jet}}{S_{Jet}}$$
 
 ### Estimating $\Pi_{JetPlane}$
 $$\Pi_{\bar \epsilon}^{\epsilon_{Max}}$$

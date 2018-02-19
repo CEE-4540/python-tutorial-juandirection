@@ -138,6 +138,9 @@ $$ = A_{ratio} = 1 + \frac{L}{S} \cos \alpha \sin \alpha = \frac{V_{Plate \uparr
 ### Settle Capture Velocity Confusion
 $$\frac{V_{Plate \uparrow}}{V_c} = \frac{L}{S} \cos \alpha \sin \alpha + \sin ^2 \alpha$$
 
+$$\frac{V_{Plate \uparrow}}{V_c} = \frac{L}{S} \cos \alpha \sin \alpha + 1$$
+
+**Off-slide**
 $$\begin{array}{l}
 \frac{V_\alpha \sin \alpha}{V_c} = \frac{L}{S} \cos \alpha \sin \alpha + \sin ^2 \alpha
 \\
@@ -145,8 +148,6 @@ Q = \frac{\pi D^2}{4} V_c \left( \frac{L}{D} \cos \alpha + \sin \alpha \right)
 \end{array}$$
 
 $$\frac{V_\uparrow}{V_\alpha} = \sin \alpha$$
-
-$$\frac{V_{Plate \uparrow}}{V_c} = \frac{L}{S} \cos \alpha \sin \alpha + 1$$
 
 
 ### Thick Plate Settlers
@@ -219,11 +220,12 @@ $$A = \frac{- S}{2} \frac{dp}{dx}$$
 
 $$\frac{du}{dy} = \frac{1}{\mu} \left( y - \frac{S}{2} \right) \frac{dp}{dx}$$
 
-$$\frac{du}{dy}_{y = 0} = \frac{6 V_\alpha}{S}$$
-
+**Off-slide**
 $$\frac{du}{dy} = \frac{- 12 q}{S^3} \left( y - \frac{S}{2} \right)$$
 
 $$\frac{du}{dy} = \frac{- 12 V_\alpha}{S^2} \left( y - \frac{S}{2} \right)$$
+
+$$\frac{du}{dy}_{y = 0} = \frac{6 V_\alpha}{S}$$
 
 
 ### Laminar Flow through Circular Tubes: Equations no gravity
@@ -265,6 +267,7 @@ $$V_t \sin \alpha \approx \frac{3 V_{Plate \uparrow} d}{S \sin \alpha}$$
 
 $$S \approx \frac{3 V_{Plate \uparrow} d}{V_t \sin^2 \alpha}$$
 
+**Off-slide**
 $$\begin{array}{l}
 h = \frac{S}{2}
 \\
@@ -306,6 +309,11 @@ $$d = d_0 \left( \frac{18 V_t \Phi \nu_{H_2O}}{g d_0^2} \frac{\rho_{H_2O}}{\rho_
 $$S \approx \frac{3}{\sin^2 \alpha} \frac{V_{Plate \uparrow }}{V_t} d_0
 \left( \frac{18 V_t \Phi \nu_{H_2O}}{g d_0^2} \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}}
 \right)^{\frac{1}{D_{Fractal} - 1}}$$
+
+
+### Minimum plate settler spacing (function of $V_t$)
+**Off-slide**
+$$\frac{S}{d_0} \frac{V_t}{V_{Plate \uparrow}} \approx \frac{3}{\sin^2 \alpha}{\left( \frac{18 V_t \Phi \nu_{H_2O}}{g d_0^2} \frac{\rho_{H_2O}}{\rho_{Floc_0} - \rho_{H_2O}} \right)^\frac{1}{D_{Fractal} - 1}}$$
 
 
 ### Slide Capture Velocity
@@ -380,6 +388,7 @@ $$h_{L_{FB}} = H_{FB}
 \left( \frac{\rho_{Clay}}{\rho_{H_2O}} - 1 \right)
 \frac{C_{Clay}}{\rho_{Clay}}$$
 
+**Off-slide**
 $$\frac{\rho_{FB} - \rho_{H_2O}}{\rho_{H_2O}} =
 \left( \frac{1}{\rho_{H_2O}} - \frac{1}{\rho_{Clay}} \right) C_{Clay}$$
 
@@ -401,6 +410,7 @@ $$W_{Diffuser} = \frac{V_{Sed} W_{Sed} B_{Diffuser}}{S_{Diffuser} \sqrt{ 2 g h_{
 
 $$B_{Diffusers}$$
 
+**Off-slide**
 $$\varepsilon_{Max} \cong \frac{\left( \Pi_{JetPlane} \frac{V_{Sed} W_{Sed} B_{Diffuser}}{S_{Diffuser}} \right)^3}{W_{Jet}^4}$$
 
 

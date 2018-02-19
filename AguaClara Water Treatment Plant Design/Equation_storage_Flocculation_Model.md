@@ -36,6 +36,11 @@ $$\varepsilon_{Max} \cong \frac{ \left( \Pi_{Plate} V \right)^3}{W_{Plate}}$$
 $$\Pi_{Plate} = \frac{ \left( \varepsilon_{Max} W_{Plate} \right)^\frac{1}{3}}{V}$$
 
 
+### Schulz and Okun (Hydraulic flocculators)
+**Off-slide**
+$$0.45 \, {\rm m} \cdot 0.45 \, {\rm m} \cdot 0.3 {\rm \frac{m}{s}} = 60.75 \, {\rm \frac{L}{s}}$$
+
+
 ### It requires many sequential doubling collisions to make a big floc
 $$\log (1,000,000,000) = n \log(2)$$
 
@@ -79,6 +84,17 @@ $$V_t = \frac{g d_0}{18 \Phi \nu_{H_2O}}
 
 
 ### Average distance between particles is the cube root of the volume occupied ($\Lambda$)
+$$\rlap{-} V_P = \frac{\pi}{6} d_P^3$$
+
+$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+
+$$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
+
+$$\Lambda  = d_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
+
+$$n_P = n_{P_0} \left( \frac{d_0}{d_P} \right)^{D_{Fractal}}$$
+
+**Off-slide**
 $$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{d_0} \right)^{3 - D_{Fractal}}$$
 
 $$\begin{array}{l}
@@ -94,16 +110,6 @@ n_{Floc} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}} = \frac{\phi_{Floc_0} \left( \f
 \\
 n_{Floc} = n_{Floc_0} \left( \frac{d_0}{d_{Floc}} \right)^{D_{Fractal}}
 \end{array}$$
-
-$$\rlap{-} V_P = \frac{\pi}{6} d_P^3$$
-
-$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
-
-$$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
-
-$$\Lambda  = d_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
-
-$$n_P = n_{P_0} \left( \frac{d_0}{d_P} \right)^{D_{Fractal}}$$
 
 
 ### Comparison of classic and hypothesized collision models
@@ -159,6 +165,7 @@ $$\Lambda = \rm{ \left[ L \right]
 \, \, \, \, \,
 \nu  = \left[ \frac{L^2}{T} \right] }$$
 
+**Off-slide**
 $$\lambda_v = \Pi_{kv} \eta_K$$
 
 $$\Pi_{kv} = 50$$
@@ -187,13 +194,14 @@ $$dN_c = \pi d_P^2 n_P^\frac{2}{3} \bar G \alpha dt$$
 
 $$dN_c = \pi d_P^3 n_P \bar G \alpha dt$$
 
-$$dN_c = \pi d_T^2n_T^\frac{1}{3} G \Gamma dt$$
-
 $$\frac{dn_P}{dN_c} =  - k n_P$$
 
 $$\frac{dn_P}{- kn_P} = \pi d_P^2 n_P^\frac{2}{3} \bar G \alpha dt$$
 
 $$\frac{dn_P}{- kn_P} = \pi d_P^3 n_P \bar G \alpha dt$$
+
+**Off-slide**
+$$dN_c = \pi d_T^2n_T^\frac{1}{3} G \Gamma dt$$
 
 $$\frac{dn_S}{dN_c} =  - k n_T$$
 
@@ -217,12 +225,16 @@ $$pC^\ast = p \left( \frac{n_P}{n_{P_0}} \right) = \frac{3}{2} \log \left( \frac
 
 $$pC^\ast = p \left( \frac{n_P}{n_{P_0}} \right) = \log \left( \pi k d_P^3 n_{P_0} \bar Gt \alpha  + 1 \right)$$
 
+$$n_{P_0} = \frac{6}{\pi d_P^3} \phi_0$$
+
+**Off-slide: left**
 $$\frac{3}{2} \left( \Lambda^2 - \Lambda_0^2 \right) = k \pi d_P^2 Gt \Gamma$$
 
 $$1 = k \frac{2\pi}{3} \left( \frac{6}{\pi} \right)^\frac{2}{3} Gt \Gamma \left( \frac{C_P}{\rho_P} \right)^\frac{2}{3}$$
 
 $$pC^\ast = \frac{3}{2} \log \left( \frac{2}{3} 6^\frac{2}{3} \pi ^\frac{1}{3} k \phi_0^\frac{2}{3} Gt \Gamma + 1 \right)$$
 
+**Off-slide: right**
 $$dn_S =  - k n_T \pi d_T^2 n_T^\frac{2}{3} G \Gamma dt$$
 
 $$\int \limits_{n_{S_{in}}}^{n_{S_{out}}} dn_S  
@@ -236,10 +248,6 @@ $$n_T = \frac{6}{\pi d_T^3} \frac{C_T}{\rho_T}$$
 
 $$\frac{n_{S_{out}}}{n_{S_{in}}} = 1 - \frac{n_T}{n_{S_{in}}} k \pi \left( \frac{6}{\pi} \right)^\frac{2}{3} \left( \frac{C_T}{\rho_T} \right)^\frac{2}{3} Gt \Gamma$$
 
-$$\frac{n_{P_0}}{n_P} = \pi k d_P^3 n_{P_0} G \Gamma t + 1$$
-
-$$n_{P_0} = \frac{6}{\pi d_P^3} \phi_0$$
-
 $$\begin{array}{l}
 \left[ \frac{\left[ {\rm{\bar G}}\left( d_{P1} + d_{P2} \right) \right]_{Max}} {V_C} \right]^n
 \\
@@ -247,6 +255,9 @@ $$\begin{array}{l}
 \\
 \alpha = \frac{\Delta V_{Surfac{e_{Max}}}} {\rm{\bar G} D_c}
 \end{array}$$
+
+**Off-slide: bottom**
+$$\frac{n_{P_0}}{n_P} = \pi k d_P^3 n_{P_0} G \Gamma t + 1$$
 
 $$\frac{G_{Max}}{\rm{\bar G}}$$
 
@@ -282,12 +293,15 @@ $$\Lambda^3 - \Lambda_0^3 = \pi k d_P^3 \bar Gt \alpha$$
 
 $$\bar Gt = \frac{3}{2} \frac{\left( \Lambda^2 - \Lambda_0^2 \right)}{k \pi d_P^2 \alpha}$$
 
+$$\bar Gt = \frac{\left( \Lambda^3 - \Lambda_0^3 \right)}{k \pi d_P^3 \alpha}$$
+
 $$\Lambda  \gg \Lambda_0$$
 
 $$\bar Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 \alpha}$$
 
 $$\bar Gt \approx \frac{\Lambda^3}{k \pi d_P^3 \alpha}$$
 
+**Off-slide**
 $$\begin{array}{l}
 Gt_{v_r \approx d_P G}
 = \frac{\Lambda^3 - \Lambda_0^3}{k \pi d_P^3 \Gamma}
@@ -362,14 +376,15 @@ L_{Deformation} = v_rt
 Gt = \frac{L_{Deformation}}{\Lambda}
 \end{array}$$
 
+**Off-slide**
 $$\frac{L_{Deformation}}{S_{Floc}}$$
 
 
-### Surface coverage (G) of clay by coagulant precipitate
+### Surface coverage ($\Gamma$) of clay by coagulant precipitate
 $$dN_c = \frac{\Gamma}{t_c} dt$$
 
 
-### Surface coverage (G) << 1 and small loss to reactor walls
+### Surface coverage ($\Gamma$) << 1 and small loss to reactor walls
 $$\Gamma = \frac{n_{nc_0} \frac{\pi}{4} d_{nc}^2 }{n_{p_0}\pi d_p^2}$$
 
 $$\Gamma = \frac{n_{nc_0} d_{nc}^2}{4 n_{p_0} d_p^2}$$
@@ -521,8 +536,6 @@ $$C_{Coag} = - \rho_{Coag} \left[ \left( \frac{1}{2} + \Pi_{HD} \right)
 \left( \frac{2}{3 \Pi_{HD}} \right)^\frac{2}{3} + \frac{2D_{Clay}}{3D_{Tube} \phi_{Clay}} \right]
 \frac{\pi D_{Coag} \phi_{Clay}}{D_{Clay}} \ln \left( 1 - \Gamma  \right)$$
 
-$$C_{Coag} = - \phi_{Clay} \frac{\rho_{Coag} D_{Coag}}{D_{Clay}} \frac{\pi \Pi_{ClaySphere}}{\Pi_{A_{Clay} A_{Total}}} \ln \left( 1 - \Gamma \right)$$
-
 $$Gt \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 \Gamma}$$
 
 $$\Gamma \approx \frac{3}{2} \frac{\Lambda^2}{k \pi d_P^2 Gt}$$
@@ -532,6 +545,9 @@ $$C_D = \frac{24}{\rm Re}$$
 $${\rm Re} = \frac{v_{r_{d_{Floc}}}}{d_{Floc}} \nu$$
 
 $$F_D = C_D \left( \pi \frac{d_{Floc}^2}{4} \right) \rho \frac{v_{r_{d_{Floc}}}^2}{2}$$
+
+**Off-slide**
+$$C_{Coag} = - \phi_{Clay} \frac{\rho_{Coag} D_{Coag}}{D_{Clay}} \frac{\pi \Pi_{ClaySphere}}{\Pi_{A_{Clay} A_{Total}}} \ln \left( 1 - \Gamma \right)$$
 
 
 ### Slow velocity through the annulus,Fast velocity at separation $\Lambda$

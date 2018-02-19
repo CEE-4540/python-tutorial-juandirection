@@ -70,6 +70,7 @@ $$h_e = \frac{V_{out}^2 - 2 V_{in} V_{out} + V_{in}^2}{2g}$$
 $$h_e = \frac{\left( V_{in}  - V_{out} \right)^2}{2g}$$
 $${h_e} = \frac{V_{in}^2}{2g}{\left( {1 - \frac{A_{in}}{A_{out}}} \right)^2}$$
 
+**Off-slide**
 $$\begin{array}{l}
 h_e = \frac{V_{in}^2}{2g}  \left( 1 -
 \frac{A_{in}}{A_{out}} \right)^2
@@ -127,9 +128,11 @@ $$\sqrt h  = \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{tank}} \sqrt {\frac{2g}{K_e}}$
 ### Finding Q as f(t)
 $$Q = A_{Valve} \sqrt{\frac{2g}{K_e}} \left( \sqrt{h_0}  - t \frac{A_{Valve}}{2 A_{tank}} \sqrt{\frac{2g}{K_e}} \right)$$
 
+$$A_{Valve} = \frac{Q_{0}}{ \sqrt{ \frac{2 h_0 g}{K_e}} }$$
+
+**Off-slide**
 $$Q = \Pi_{vc} A_{or} \sqrt{2g} \left( \sqrt{h_0} - \frac{t \Pi_{vc}}{2} \frac{A_{or}}{A_{tank}} \sqrt{2g} \right)$$
 
-$$A_{Valve} = \frac{Q_{0}}{ \sqrt{ \frac{2 h_0 g}{K_e}} }$$
 
 ### Surprise… Q and chlorine dose  decrease linearly with time!
 $$Q = A_{Valve} \sqrt{ \frac{2g}{K_e} } \left( \sqrt{h_0} - t \frac{A_{Valve}}{2 A_{Tank}} \sqrt{ \frac{2g}{K_e} } \right)$$
@@ -164,6 +167,7 @@ $$A_{Valve} = \frac{\pi D_{Valve}^2}{4}$$
 
 $$D_{Valve} = \sqrt{ \frac{8 L_{Tank} W_{Tank}}{\pi t_{Drain}}} {\left( \frac{K_{e} H_{Tank}}{2g} \right)^{\frac{1}{4}}}$$
 
+**Off-slide**
 $$A_{Valve} = \frac{2 A_{Tank}}{t_{Drain}}\sqrt {\frac{K_e h_0} {2g}}$$
 
 
@@ -218,6 +222,7 @@ $$D = \left[ \frac{8K Q^2}{\Pi_{Error} h_l g \pi^2} \right]^{\frac{1}{4}}$$
 
 $$V_{Max} = \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K_e} }}$$
 
+**Off-slide**
 $$L = \left( \frac{1 - \Pi_{Error}}{\Pi_{Error}} \right) \frac{1}{16 \nu \pi} \frac{\pi D^2}{4} \sum{K_e} \sqrt{ \frac{2 h_L g \Pi_{Error}}{\sum{K_e} }}$$
 
 $$L = \frac{\left( 1 - \Pi_{Error} \right) D^2}{64 \nu} \sqrt{ \frac{2 h_L g \sum{K_e} }{\Pi_{Error}}}$$
@@ -306,10 +311,11 @@ $$C_P \propto \frac{K_L^{n_C} h_P^{n_C}}{h_P^{n_P}}$$
 
 $$Q_P = K_P h_P^{n_P}$$
 
+**Off-slide**
 $$n_P = n_C$$
 
-### Dose scale on the lever arm?
 
+### Dose scale on the lever arm?
 $$C_P = \sqrt{K_L} \frac{C_C K_C}{K_P}$$
 
 $$\sqrt{K_L} \propto C_P$$
@@ -322,8 +328,8 @@ $$\frac{4 \pi r^3}{3 \cdot 2} \rho g + \rho g \Delta h \left( \pi r^2 \right) = 
 
 $$\rho g \Delta h \left( \pi r^2 \right)$$
 
-### Surface Tension can prevent flow!
 
+### Surface Tension can prevent flow!
 $$\Delta h = \frac{2 \pi r \sigma - \frac{4 \pi r^3}{3 \cdot 2} \rho g}{\rho g \left( \pi r^2 \right)}$$
 
 $$\Delta h = \frac{2 \sigma}{\rho g r} - \frac{2r}{3}$$

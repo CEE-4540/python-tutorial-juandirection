@@ -38,4 +38,5 @@ This file will contain weekly updates into my work. All changes will be pushed t
 
 ### Done
 1. Figured out how to add color to the IguanaTeX equations. Not too tough, but it took longer than I would have liked.
-2. Finished transferring equations for `Flocculation Model` and `Sedimentation`
+2. Finished transferring equations for `Flocculation Model`, `Sedimentation`, and `Filtration`
+3. Went back and labeled all the equations that were off the slides for future clarity

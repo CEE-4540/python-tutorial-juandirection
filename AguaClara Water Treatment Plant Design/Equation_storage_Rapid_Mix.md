@@ -50,6 +50,13 @@ $$\varepsilon = \left[ \frac{W}{Kg} \right]
 
 
 ### How far can turbulence mix? (Viscous inner length scale)
+$$\eta_K = \left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}$$
+
+$$\lambda_v \approx \Pi_{kv} \eta_K$$
+
+$$\Pi_{kv} \approx 50 $$
+
+**Off-slide**
 $${\rm Re}  
 = \frac{V L}{\nu}
 = \frac{L^2}{t\nu}
@@ -62,12 +69,6 @@ $$L^2 = {\rm Re}_{transition} \left( \frac{\nu}{\varepsilon} \right)^{\frac{1}{2
 $$L^2 = {\rm Re}_{transition} \frac{\nu^{\frac{3}{2}}}{\varepsilon^{\frac{1}{2}}}$$
 
 $$L_{transition} = \sqrt{\rm Re_{transition}} \left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}$$
-
-$$\eta_K = \left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}$$
-
-$$\lambda_v \approx \Pi_{kv} \eta_K$$
-
-$$\Pi_{kv} \approx 50 $$
 
 
 ### The Reynolds Number requirement may be a challenge for lab scale flows and irrelevant above 0.1 L/s
@@ -105,8 +106,8 @@ $$ \varepsilon_{Max} \cong \frac{ \left( \Pi_{JetRound} \frac{4Q}{\pi D_{Jet}^2}
 
 $$ D_{Orifice} \cong \left( \frac{4 Q \Pi_{JetRound}}{\varepsilon_{Max}^{\frac{1}{3}} \pi} \right)^{\frac{3}{7}} \frac{1}{\sqrt{\Pi_{vc} }}$$
 
-$$
-\varepsilon_{Max} \cong  \frac{ \left( \Pi_{Jet} \frac{4 Q_{Jet}}{\pi} \right)^3 }{D_{Orifice}^7 \sqrt{\Pi_{vc}^7} }
+**Off-slide**
+$$\varepsilon_{Max} \cong  \frac{ \left( \Pi_{Jet} \frac{4 Q_{Jet}}{\pi} \right)^3 }{D_{Orifice}^7 \sqrt{\Pi_{vc}^7} }
 $$
 
 
@@ -119,6 +120,7 @@ $$h_e = \frac{ \left( D_{Jet} \, \varepsilon_{Max} \right)^{\frac{2}{3}}}{ 2g \P
 
 $$h_e = \frac{ \left( \frac{4 \Pi_{JetRound} Q \varepsilon_{Max}^2}{\pi} \right)^{\frac{2}{7}}}{2 g \Pi_{JetRound}^2}$$
 
+**Off-slide**
 $$Q = \frac{D_{Jet}^{\frac{7}{3}} \pi \varepsilon_{Max}^{\frac{1}{3}}}{4 \Pi_{Jet}}$$
 
 
@@ -152,7 +154,8 @@ $$\eta_K = L_D$$
 $$\left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}} = \sqrt{D_M t_{Diffusion}}$$
 
 $$t_{Diffusion} = \sqrt{ \frac{\nu^3}{\varepsilon D_M^2}} $$
-AKA
+
+**Off-slide**
 $$t_{Diffusion} \approx \left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{2}}\frac{1}{D_M}$$
 
 $$\Pi_{D_{mix}} = \left( \frac{\varepsilon D_M^2 \, t_{Diffuion}^2}{\nu^3} \right)^{\frac{1}{4}}$$
@@ -180,6 +183,17 @@ k_v \eta_K = 0.125
 
 
 ### Average distance between particles is the cube root of the volume occupied (L)
+$$\rlap{-} V_P = \frac{\pi}{6} d_P^3$$
+
+$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
+
+$$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
+
+$$\Lambda  = d_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
+
+$$n_P = n_{P_0} \left( \frac{d_0}{d_P} \right)^{D_{Fractal}}$$
+
+**Off-slide**
 $$\phi_{Floc} = \phi_{Floc_0} \left( \frac{d}{d_0} \right)^{3 - D_{Fractal}}$$
 
 $$\begin{array}{l}
@@ -196,25 +210,16 @@ n_{Floc} = \frac{\phi_{Floc}}{\rlap{-} V_{Floc}} = \frac{\phi_{Floc_0} \left( \f
 n_{Floc} = n_{Floc_0} \left( \frac{d_0}{d_{Floc}} \right)^{D_{Fractal}}
 \end{array}$$
 
-$$\rlap{-} V_P = \frac{\pi}{6} d_P^3$$
-
-$$n_P = \frac{C_P}{\rlap{-} V_P \rho_P} = \frac{6}{\pi d_P^3} \frac{C_P}{\rho_P}$$
-
-$$\Lambda  = \frac{1}{n_P^{\frac{1}{3}}}$$
-
-$$\Lambda  = d_P \left( \frac{\pi }{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
-
-$$n_P = n_{P_0} \left( \frac{d_0}{d_P} \right)^{D_{Fractal}}$$
-
 
 ### Hypothesis: Energy Dissipation Rate for Micromixing
 $$\eta_v = \Pi_{kv} \eta_K = \Pi_{kv} \left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}$$
 
 $$\Lambda  = D_P \left( \frac{\pi}{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}}$$
 
-$$D_P \left( \frac{\pi}{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}} = \eta_v = \Pi_{kv} \, \eta_K = \Pi_{kv} \left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}$$
-
 $$\varepsilon = \nu^3 \left( \frac{\Pi_{kv}}{D_P} \right)^4 \left( \frac{6}{\pi} \frac{C_P}{\rho_P} \right)^{\frac{4}{3}}$$
+
+**Half-off-slide**
+$$D_P \left( \frac{\pi}{6} \frac{\rho_P}{C_P} \right)^{\frac{1}{3}} = \eta_v = \Pi_{kv} \, \eta_K = \Pi_{kv} \left( \frac{\nu^3}{\varepsilon} \right)^{\frac{1}{4}}$$
 
 
 ### How much water is cleared of nanoparticles by a clay particle?
@@ -289,3 +294,8 @@ $$\int \limits_{n_{NC_0}}^{n_{NC}} n_{NC}^{- 1} \, dn_{NC}  =  - \pi d_{Clay} L_
 $$2.3 p C_{NC} = \pi d_{Clay} L_{Diff_{NC}} \Lambda_{Clay} G k n_{Clay} t$$
 
 $$t = \frac{2.3p C_{NC} \Lambda_{Clay}^2}{\pi d_{Clay} L_{Diff_{NC}} G k}$$
+
+**Off-slide**
+$$C_P^\frac{- 2}{3} = \frac{k \Gamma t}{\frac{3}{2 \pi G} \left( \rho_P \frac{\pi}{6} \right)^\frac{2}{3}} + C_{P_0}^\frac{- 2}{3}$$
+
+$$\left( \frac{C_P}{C_{P_0}} \right)^\frac{- 2}{3} = \frac{2 \pi G k \Gamma \phi_0^\frac{2}{3} t}{3 \left( \frac{\pi}{6} \right)^\frac{2}{3}} + 1$$
