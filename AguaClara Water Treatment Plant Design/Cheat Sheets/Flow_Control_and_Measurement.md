@@ -21,7 +21,20 @@ This section is meant to be a brief refresher on fluid mechanics. It will only c
 If you wish to review fluid mechanics in more detail, please refer to [this guide](https://confluence.cornell.edu/display/cee4540/Fluids+Review+Guide "CEE 4540 Fluids Review"). If you wish to review from the fluids textbook from CEE 3310, you can find a pdf [here](https://hellcareers.files.wordpress.com/2016/01/fluid-mechanics-seventh-edition-by-frank-m-white.pdf "CEE 3310 textbook").
 
 ### 1.1) The Bernoulli and Energy Equations
-As explained in more detail than most of you wanted to know in CEE 3310, the Bernoulli and energy equations are incredibly useful in
+As explained in more detail than most of you wanted to know in CEE 3310, the Bernoulli and energy equations are incredibly useful in understanding the transfer of the fluid's energy across a control volume. This energy has three forms: pressure, potential (deriving from elevation), and kinetic (deriving from velocity). These three terms make up the Bernoulli equation:
+
+$$\frac{p_1}{\gamma} + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\gamma } + {z_2} + \frac{v_2^2}{2g}$$
+
+Such that:  
+$p$ = Pressure  
+$\gamma = \rho_{fluid} \, g$ = Specific weight of fluid  
+$g$ = Acceleration due to gravity  
+$z$ = Elevation relative to a reference elevation
+$v$ = velocity of water
+
+Notice that each term in this form of the Bernoulli equation has units of length, even though the terms represent the energy of water. The energy of water described in units of length is called **head**. Thus, $\frac{p}{\gamma}$ is the pressure head, $z$ is the elevation head, and $\frac{v^2}{2g}$ is the velocity head. The following diagram shows these various forms of head via a 1 meter deep bucket (left) and a jet of water shooting out of the ground (right).
+
+![Anyone getting this?](https://github.com/AguaClara/CEE4540_DC/blob/Flow_Control_and_Measurement/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Different%20forms%20of%20head.jpg)
 
 ### 1.2) The Orifice Equation
 
