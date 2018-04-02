@@ -6,12 +6,12 @@ Welcome to the first cheat sheet of CEE 4540! These documents will serve as guid
 
 ---
 
-## Table of contents
+## Table of Contents
 Please use this table to control/command find the sections you are looking for.
 
 #### Section 1: Fluids Review
 1.1) The Bernoulli and Energy Equations   
-1.2) Minor and Major Losses
+1.2) Minor and Major Losses  
 1.3) The Orifice Equation
 
 ---
@@ -23,7 +23,7 @@ If you wish to review fluid mechanics in (much) more detail, please refer to [th
 
 ### Important Terms
 1. **Head**
-2. **streamline**
+2. **Streamline**
 
 ### Important Equations
 1. Bernoulli equation
@@ -40,20 +40,25 @@ Such that:
 $p$ = Pressure  
 $\gamma = \rho_{fluid} \, g$ = Specific weight of fluid  
 $g$ = Acceleration due to gravity  
-$z$ = Elevation relative to a reference elevation
+$z$ = Elevation relative to a reference elevation  
 $v$ = velocity of water
 
 Notice that each term in this form of the Bernoulli equation has units of length, even though the terms represent the energy of water. The energy of water described in units of length is called **head**. Thus, $\frac{p}{\gamma}$ is the pressure head, $z$ is the elevation head, and $\frac{v^2}{2g}$ is the velocity head. The following diagram shows these various forms of head via a 1 meter deep bucket (left) and a jet of water shooting out of the ground (right).
 
 ![Anyone getting this?](https://github.com/AguaClara/CEE4540_DC/blob/Flow_Control_and_Measurement/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Different%20forms%20of%20head.jpg)
 
-#### Assumptions behind the Bernoulli equation
+There are two important distinctions to keep in mind when using head to talk about energy. First is that head is independent of volume. So raising 1 liter of water up by one meter and raising 100 liters of water up by one meter are both equivalent to giving the water 1 meter of head, even though it requires 100 times more energy to raise the hundred liters. Second is that head changes depending on the density of the fluid under consideration. Consider mercury, for example, which is 13.6 times more dense than water. 1 meter of mercury head is equivalent to 13.6 meters of water head.
+
+##### Assumptions behind the Bernoulli equation
 Unfortunately, the Bernoulli equation is an approximation and is therefore not applicable in all circumstances. The assumptions and conditions necessary to make the Bernoulli equation applicable are as follows:
 
 1. Steady Flow. Bernoulli should not be used during periods in which the flow condition is changing, such as when turning a pump on or off, before the flow has equilibrated.
 2. Incompressible flow. Meaning that the density of the fluid does not change throughout the control volume over which the Bernoulli equation is being applied.
 3. Flow along a streamline. The Bernoulli equation applies to two or more varying positions of the *same parcel of water*. It is saying that the energy of this parcel is conserved throughout its flow path, and is simply being transferred between pressure, elevation, and velocity. The flow path of any given parcel of water is called its **streamline**. Since the Bernoulli equation compares two positions of the same parcel of water, it can only be applied at different points across that particle's streamline.
 4. No energy gain or loss. The Bernoulli equation assumes that the energy of the parcel of water being followed is not changing. This means that there are negligible losses to friction (due to the assumption that the fluid is non-viscous), negligible changes in temperature, and no work being done on the fluid throughout the streamline.  
+
+##### Example problems
+[Here is a worksheet with very straightforward example problems using the Bernoulli equation.](https://www.teachengineering.org/content/cub_/lessons/cub_bernoulli/cub_bernoulli_lesson01_bepworksheetas_draft4_tedl_dwc.pdf "Bernoulli worksheet") Note that the solutions use the pressure-form of the Bernoulli equation. This form of the equation does not affect the solution it is used for.
 
 #### The Energy Equation
 This 4th assumption stated above represents the key difference between the Bernoulli equation and the energy equation *for the purpose of this class*. **The energy equation** accounts for the loss of energy through conveyance of the fluid ($h_L$) and the charging of a turbine ($h_T$) as well as energy gain provided by a pump ($h_P$).
@@ -64,10 +69,14 @@ You'll also notice the two $\alpha$ terms attached to the velocity head. These a
 
 $$\frac{p_{1}}{\gamma} + z_{1} + \frac{V_{1}^2}{2g} = \frac{p_{2}}{\gamma} + z_{2} + \frac{V_{2}^2}{2g} + h_L$$
 
-This is the form of the energy equation that you will see over and over again in CEE 4540. To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid's loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
+**This is the form of the energy equation that you will see over and over again in CEE 4540.** To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid's loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
 
-### 1.2) Minor and Major Losses
-Oh boy here we go
+### 1.2) Head Loss
+**Head loss** is a term that is ubiquitous in this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid, which is referred to as head. For our purpose, there are only two necessary head loss terms to consider: minor losses and major losses.
+
+Minor losses arise from flow expansions creating turbulence in the water
+
+
 
 ### 1.3) The Orifice Equation
 
