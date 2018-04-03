@@ -101,3 +101,8 @@ For the following presentations, let me know what slides you want to be consider
 ### Done
 1. Began `Flow Control and Measurement.md` cheat sheet. There are many, many ways of writing a guide. The more eyes that look at this and offer advice, the better. I'm planning on sending it out to many people to (hopefully) look at it and offer advice on what is good, what is bad, and what could be different.
 2.
+
+### To Do
+1. Make consistent the equations in `Flow Control and Measurement` once I get IguanaTeX working again. $p$ vs $P$ for pressure, $v$ vs $V$ for velocity. Keep consistency for using $\gamma$ vs $\rho \, g$.
+2. Make sure that the Reynolds number transition is consistent throughout all the content in the class. Lecture slides, DCs, and cheat sheets.
+3. Incorporate aide_design equations and parameters into the cheat sheets. Let's make this class dope
