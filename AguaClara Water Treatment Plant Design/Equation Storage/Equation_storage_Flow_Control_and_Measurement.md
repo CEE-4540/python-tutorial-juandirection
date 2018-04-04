@@ -8,7 +8,7 @@ This file is a temporary storage place for the LaTeX equations used in 4540 slid
 
 # **Flow Control and Measurement**
 ### Why is there drag?
-$$\frac{p_1}{\gamma } + {z_1} + \frac{v_1^2}{2g} = \frac{p_2}{\gamma } + {z_2} + \frac{v_2^2}{2g}$$
+$$\frac{p_1}{\rho g} + {z_1} + \frac{V_1^2}{2g} = \frac{p_2}{\rho g } + {z_2} + \frac{V_2^2}{2g}$$
 
 
 ### Orifice Equation

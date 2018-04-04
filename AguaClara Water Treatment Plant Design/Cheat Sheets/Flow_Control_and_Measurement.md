@@ -85,10 +85,10 @@ $$\frac{p_{1}}{\rho g} + z_{1} + \frac{V_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{
 **This is the form of the energy equation that you will see over and over again in CEE 4540.** To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid's loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
 
 ### 1.2) Head Loss
-**Head loss** is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through time and space. There are two components to head loss: major losses and minor losses.
+**Head loss**, $h_L$ is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through time and space. There are two components to head loss: major losses, $h_f$ and minor losses $h_e$ such that $h_L = h_f + h_e$.
 
 #### Major Losses
-These losses are the result of friction between the fluid and the surface over which the fluid is flowing. For the purposes of this class, we will only deal with major losses in pipes. However, it is helpful to consider the following example when trying to understand major losses: imagine, as you have so often in physics class, pushing a large box across the ground. Friction is what resists your efforts to push the box, and the farther you push the box, the more energy you expend pushing against friction. The same is true for water moving through a pipe, where water is the box to be moved, the pipe is the floor that provides the friction, and the major losses of the water is analogous to the energy you expend pushing the box.
+These losses are the result of friction between the fluid and the surface over which the fluid is flowing, defined as [shear](https://en.wikipedia.org/wiki/Shear_force "Shear wikipedia"). For the purposes of this class, we will only deal with major losses in pipes. However, it is helpful to consider the following example when trying to understand major losses: imagine, as you have so often in physics class, pushing a large box across the ground. Friction is what resists your efforts to push the box, and the farther you push the box, the more energy you expend pushing against friction. The same is true for water moving through a pipe, where water is the box to be moved, the pipe is the floor that provides the friction, and the major losses of the water is analogous to the energy you expend pushing the box.
 
 Fortunately for us, Henry Darcy and Julius Weisbach came up with a handy equation to determine the major losses in a pipe _under both [**laminar**](https://en.wikipedia.org/wiki/Laminar_flow "Laminar flow wikipedia") and [**turbulent**](https://en.wikipedia.org/wiki/Turbulence "Turbulent flow wikipedia") flow_. Their equation is logically but unoriginally named the [**Darcy-Weisbach equation**](https://en.wikipedia.org/wiki/Darcy%E2%80%93Weisbach_equation "Darcy-Weisbach wikipedia"):
 
@@ -143,13 +143,32 @@ In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, cre
 
 #### Minor Losses
 
-Unfortunately, there is no simple 'box across the ground' example to explain minor losses. So instead, consider certain components of a [hydraulic jump](https://www.youtube.com/watch?v=5spXXZX55C8 "What an amazingly made video"). You can see a great deal of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The vigorous mixing of the water in the transition region of the hydraulic jump results in a great deal of friction *between water and water* (the measure of internal friction of a fluid is called [**viscosity**](https://en.wikipedia.org/wiki/Viscosity "Viscosity wikipedia")). This turbulent eddy-induced internal friction results in minor losses, much like fluid-pipe friction results in major losses.
+Unfortunately, there is no simple 'box across the ground' example to explain minor losses. So instead, consider certain components of a [hydraulic jump](https://www.youtube.com/watch?v=5spXXZX55C8 "What an amazingly made video"). In the video, you can see a great deal of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The vigorous mixing of the water in the transition region of the hydraulic jump results in a great deal of friction *between water and water* (the measure of internal friction of a fluid is called [**viscosity**](https://en.wikipedia.org/wiki/Viscosity "Viscosity wikipedia")). This turbulent eddy-induced internal friction results in minor losses, much like fluid-pipe friction results in major losses.
 
-In a hydraulic jump, the flow expands vertically
+As is the case in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: _**minor losses are caused by flow expansions**_. Imagine a pipe fitting that connects a small diameter pipe to a large one. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies cause minor losses. You might know the equation for minor losses, but understanding its derivation is very important to AguaClara plant design. Thus, it will be derived again here with the energy equation, using the following image as reference.
+
+![]( "da image")
+
+$$\frac{p_{in}}{\rho g} + \cancel{z_{in}} + \frac{V_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{V_{out}^2}{2g} + h_L$$
+
+Since the height of the 'in' and 'out' references are the same, we can eliminate $z_{in}$ and $z_{out}$. Since we are considering such a small length of pipe, we will neglect the major losses component of head loss. As such, we will use $h_e$ instead of $h_L$ The following three equations are all the same, simply rearranged to solve for $h_e$.
+
+$$\frac{p_{in}}{\rho g} + \frac{V_{in}^2}{2g} = \frac{p_{out}}{\rho g} + \frac{V_{out}^2}{2g} + h_e$$
+
+$$\frac{p_{in} - p_{out}}{\rho g} = \frac{V_{out}^2 - V_{in}^2}{2g} + h_e$$
+
+$$h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{V_{in}^2 - V_{out}^2}{2g}$$
+
+This equation solved for $h_e$ has four variables, while we would like it to have only one. Thus, we will invoke conservation of momentum in the horizontal direction to simplify it a bit. The change in momentum from the 'in' point to the 'out' point can only be driven by the force of the pressure difference between the points and shear along the wall.
+
+ Recall that momentum, $M$, is usually mass times velocity, $m \, V$. Since water is flowing through a pipe, there is not one singular mass. Instead, there is a mass flow rate, or a mass per time indicated by $\rho \, Q$. Applying the continuity equation $Q = V \, A$, we obtain the following equation for the momentum of a fluid flowing through a pipe, $M = \rho V^2 A$.
+
+
+
 
 
 ### 1.3) The Orifice Equation
-)
+
 $$Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}$$
 
 This equation is one that you'll see again and again throughout this class. Thus, understanding where it comes from early on will be greatly beneficial in aiding your understanding of future concepts, derivations, and equations.
