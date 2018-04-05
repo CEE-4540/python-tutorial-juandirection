@@ -96,13 +96,17 @@ For the following presentations, let me know what slides you want to be consider
 </div>
 
 ***
-## Third Progress Report: Return from Japan, beginning of long-term, stable work
+## Fourth Progress Report: Return from Japan, beginning of long-term, stable working period! 4/5/2018
 
 ### Done
 1. Began `Flow Control and Measurement.md` cheat sheet. There are many, many ways of writing a guide. The more eyes that look at this and offer advice, the better. I'm planning on sending it out to many people to (hopefully) look at it and offer advice on what is good, what is bad, and what could be different.
-2.
+    - This is a significant project!
+2. Made consistent Bernoulli/energy equation variables in slides ($\rho g$ vs $\gamma$, $v$ vs $V$)
+3. Continuing to clarify the `Flow Control and Measurement` powerpoint.
 
-### To Do
-1. Make consistent the equations in `Flow Control and Measurement` once I get IguanaTeX working again. $p$ vs $P$ for pressure, $v$ vs $V$ for velocity. Keep consistency for using $\gamma$ vs $\rho \, g$.
-2. Make sure that the Reynolds number transition is consistent throughout all the content in the class. Lecture slides, DCs, and cheat sheets.
-3. Incorporate aide_design equations and parameters into the cheat sheets. Let's make this class dope
+### To Do, all in `Flow Control and Measurement.md`
+1. Find a good site to link to 'head'.
+2. Find the 'AguaClara standard unit convention' that's floating around somewhere and add it to the introduction.
+3. Figure out how to get markdown in atom to download/read the \cancel package in MikTex for math.
+4. Include control volumes into the streamline assumption of the Bernoulli equation section
+5. Solicit feedback from people on the cheat sheet.
