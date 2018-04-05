@@ -1,6 +1,14 @@
 # Logbook for Spring 2018 CEE 4540 Updates
 
-This file will contain weekly updates into my work. All changes will be pushed to the `Juan_class_book_work` branch. Every week (the day depends on my work schedule that week), I will send Monroe an email containing a link to this file's page on GitHub in addition to supplementary material. For example, this first week I will send him the example of the 'extra' slides for his viewing pleasure (or displeasure).
+This file will contain weekly updates into my work. All changes will be pushed to a non-master branch, and I will only have one branch at a time for whatever project I am working on. Every week (the day depends on my work schedule that week), I will send Monroe an email containing a link to this file's page on GitHub in addition to supplementary material. For example, this first week I will send him the example of the 'extra' slides for his viewing pleasure (or displeasure).
+
+***
+##List of Ideas and Concerns
+1. It is not ideal to have both a confluence and a GitHub page that contain course resources. This will confuse students very much, they will be unable to find or unwilling to look for the simple things, and they will pester the TAs.  
+**Ambitious idea: Move everything to GitHub**  
+Confluence, in all its glory, is not well liked by students and has a tendency to get very messy. Despite the fact that it seems like the perfect tool, I've only every heard complaints from student, both in AguaClara and 4540.
+    - This is a huge task.
+2.
 
 ***
 
@@ -86,3 +94,19 @@ For the following presentations, let me know what slides you want to be consider
 - `Public Health`
 - `Last Lecture`
 </div>
+
+***
+## Fourth Progress Report: Return from Japan, beginning of long-term, stable working period! 4/5/2018
+
+### Done
+1. Began `Flow Control and Measurement.md` cheat sheet. There are many, many ways of writing a guide. The more eyes that look at this and offer advice, the better. I'm planning on sending it out to many people to (hopefully) look at it and offer advice on what is good, what is bad, and what could be different.
+    - This is a significant project!
+2. Made consistent Bernoulli/energy equation variables in slides ($\rho g$ vs $\gamma$, $v$ vs $V$)
+3. Continuing to clarify the `Flow Control and Measurement` powerpoint.
+
+### To Do, all in `Flow Control and Measurement.md`
+1. Find a good site to link to 'head'.
+2. Find the 'AguaClara standard unit convention' that's floating around somewhere and add it to the introduction.
+3. Figure out how to get markdown in atom to download/read the \cancel package in MikTex for math.
+4. Include control volumes into the streamline assumption of the Bernoulli equation section
+5. Solicit feedback from people on the cheat sheet.
