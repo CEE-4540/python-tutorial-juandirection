@@ -55,7 +55,7 @@ $$\frac{p_1}{\rho g} + {z_1} + \frac{V_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \
 Such that:  
 $p$ = pressure,  $\frac{[M]}{[L] \cdot [T]^2}$  
 $\rho$ = fluid density, $\frac{[M]}{[L]^3}$    
-$g$ = acceleration due to gravity,  $\frac{[L]}{[T]^2}$  
+$g$ = acceleration due to gravity,  $\frac{[L]}{[T]^2}$, in aide_design as `pc.gravity`  
 $z$ = elevation relative to a reference, $[L]$  
 $V$ = fluid velocity, $\frac{[L]}{[T]}$  
 
@@ -65,7 +65,7 @@ There are two important distinctions to keep in mind when using head to talk abo
 
 Going back to the Bernoulli equation, the $\frac{p}{\rho g}$ term is called the pressure head, $z$ the elevation head, and $\frac{V^2}{2g}$ the velocity head. The following diagram shows these various forms of head via a 1 meter deep bucket (left) and a jet of water shooting out of the ground (right).
 
-![Anyone getting this?](https://github.com/AguaClara/CEE4540_DC/blob/Flow_Control_and_Measurement/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Different%20forms%20of%20head.jpg)
+![Anyone getting this?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Different%20forms%20of%20head.jpg)
 
 ##### Assumptions behind the Bernoulli equation
 Unfortunately, the Bernoulli equation is an approximation of reality and is therefore not applicable in all circumstances. The assumptions and conditions necessary to make the Bernoulli equation applicable are as follows:
@@ -148,7 +148,7 @@ $D$ = pipe diameter
 
 In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the [**Moody diagram**](https://en.wikipedia.org/wiki/Moody_chart "Moody wikipedia"). This diagram has the friction factor $\rm{f}$ on the left-hand y-axis, relative pipe roughness $\frac{\epsilon}{D}$ on the right-hand y-axis, and Reynolds number $\rm{Re}$ on the x-axis. The Moody diagram is an alternative to computational methods for finding $\rm{f}$.
 
-![Moody doody](https://github.com/AguaClara/CEE4540_DC/blob/Flow_Control_and_Measurement/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Moody.jpg)
+![Moody doody](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Moody.jpg)
 
 #### Minor Losses
 
@@ -156,7 +156,7 @@ Unfortunately, there is no simple 'box across the ground' example to explain min
 
 As is the case in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: _**minor losses are caused by flow expansions**_. Imagine a pipe fitting that connects a small diameter pipe to a large one. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies cause minor losses. You may already know the equation for minor losses, but understanding its derivation is very important to AguaClara plant design. Thus, it will be derived again here with the energy equation, using the following image as reference.
 
-![I really don't think anyone can read this](https://github.com/AguaClara/CEE4540_DC/blob/Flow_Control_and_Measurement/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Minor%20loss%20pipe.jpg)
+![I really don't think anyone can read this](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Minor%20loss%20pipe.jpg)
 
 $$\frac{p_{in}}{\rho g} + \cancel{z_{in}} + \frac{V_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{V_{out}^2}{2g} + h_L$$
 
@@ -185,4 +185,4 @@ This equation is one that you'll see again and again throughout this class. Thus
 ### Purpose
 The orifice equation relates the flow out of an orifice, $Q$ to the height of the water above the orifice $\Delta h$.
 
-![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/Flow_Control_and_Measurement/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Hole%20in%20a%20bucket.jpg)
+![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Cheat%20Sheets/Images/Hole%20in%20a%20bucket.jpg)
