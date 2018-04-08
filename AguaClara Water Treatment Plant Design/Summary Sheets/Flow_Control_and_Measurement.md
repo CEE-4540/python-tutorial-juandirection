@@ -143,8 +143,8 @@ For turbulent flow, the friction factor is more difficult to determine. In this 
 $${\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}$$
 
 Such that:  
-$\epsilon$ = pipe roughness  
-$D$ = pipe diameter
+$\epsilon$ = pipe roughness, $[L]$  
+$D$ = pipe diameter, $[L]$
 
 **Function in aide_design:** `pc.fric(FlowRate, Diam, Nu, PipeRough)` Returns $\rm{f}$ for laminar *or* turbulent flow. For laminar flow, use '0' for the `PipeRough` input.
 
@@ -158,34 +158,7 @@ In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gat
 
 Unfortunately, there is no simple 'box across the ground' example to explain minor losses. So instead, consider certain components of a [hydraulic jump](https://www.youtube.com/watch?v=5spXXZX55C8 "What an amazingly made video, but sorry for the 3310 PTSD"). In the video, you can see a great deal of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The vigorous mixing of the water in the transition region of the hydraulic jump results in a great deal of friction *between water and water* (the measure of a fluid's resistance to internal friction is called [**viscosity**](https://en.wikipedia.org/wiki/Viscosity "Viscosity wikipedia")). This turbulent eddy-induced internal friction results in minor losses, much like fluid-pipe friction results in major losses.
 
-As is the case in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: _**minor losses are caused by flow expansions**_. Imagine a pipe fitting that connects a small diameter pipe to a large one. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies cause minor losses. You may already know the equation for minor losses, but understanding its derivation is very important to correct AguaClara plant design. Thus, it will be derived again here with the energy equation, using the following image as reference.
-
-
-![I really don't think anyone can read this](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Minor%20loss%20pipe.jpg?raw=true)
-
-
-$$\frac{p_{in}}{\rho g} + {z_{in}} + \frac{V_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{V_{out}^2}{2g} + h_L$$
-
-Since the elevations of the 'in' and 'out' references are the same, we can eliminate $z_{in}$ and $z_{out}$. As we are considering such a small length of pipe, we will neglect the major losses component of head loss. As such, $h_L = h_e$. The following three equations are all the same, simply rearranged to solve for $h_e$.
-
-$$\frac{p_{in}}{\rho g} + \frac{V_{in}^2}{2g} = \frac{p_{out}}{\rho g} + \frac{V_{out}^2}{2g} + h_e$$
-
-$$\frac{p_{in} - p_{out}}{\rho g} = \frac{V_{out}^2 - V_{in}^2}{2g} + h_e$$
-
-$$h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{V_{in}^2 - V_{out}^2}{2g}$$
-
-This last equation to determine $h_e$ has four variables, and we would like it to have as few as possible. Thus, we will invoke conservation of momentum in the horizontal direction across our control volume to remove some variables. The difference in momentum from the 'in' point to the 'out' point is result of the pressure difference between each end of the control volume. Note that we will be considering the pressure at the centroid of our control surfaces. We will neglect shear along the pipe walls.
-
-$$M_{in \, x} + M_{out \, x} = F_{p_{in \, x}} + F_{p_{out \, x}}$$
-
-Such that:  
-$M_{in \, x}$ =
-
-Recall that momentum, $M$, is mass times velocity, $m \, V$, for solid bodies. Since we consider water flowing through a pipe, there is not one singular mass. Instead, there is a mass flow rate, or a mass per time indicated by $\rho \, Q$. Applying the continuity equation $Q = V \, A$, we obtain the following equation for the momentum of a fluid flowing through a pipe, $M = \rho V^2 A$.
-
-
-
-
+As is the case in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: _**minor losses are caused by flow expansions**_. Imagine a pipe fitting that connects a small diameter pipe to a large one. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies cause minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through the full derivation, which can be found here.
 
 ### 1.3) The Orifice Equation
 
