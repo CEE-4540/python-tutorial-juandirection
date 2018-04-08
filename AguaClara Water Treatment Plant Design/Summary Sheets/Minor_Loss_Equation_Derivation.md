@@ -1,12 +1,13 @@
+# Deriving the Minor Loss Equations
+
 This document contains the derivation of the minor loss equation using the following image as a reference. The derivation begins with a slightly simplified the energy equation, in which $h_P$ and $h_T$ have been eliminated.
 
 
 ![I really don't think anyone can read this](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Minor%20loss%20pipe.jpg?raw=true)
 
-
 $$\frac{p_{in}}{\rho g} + {z_{in}} + \frac{V_{in}^2}{2g} = \frac{p_{out}}{\rho g} + z_{out} + \frac{V_{out}^2}{2g} + h_L$$
 
-Since the elevations of the 'in' and 'out' references are the same, we can eliminate $z_{in}$ and $z_{out}$. As we are considering such a small length of pipe, we will neglect the major losses component of head loss. As such, $h_L = h_e$. The following three equations are all the same, simply rearranged to solve for $h_e$.
+Since the elevations of the 'in' and 'out' references are the same, we can eliminate $z_{in}$ and $z_{out}$. As we are considering such a small length of pipe, we will neglect the major loss component of head loss. Thus, $h_L = h_e$. The following three equations are all the same, simply rearranged to solve for $h_e$.
 
 $$\frac{p_{in}}{\rho g} + \frac{V_{in}^2}{2g} = \frac{p_{out}}{\rho g} + \frac{V_{out}^2}{2g} + h_e$$
 
@@ -19,21 +20,21 @@ This last equation to determine $h_e$ has four variables, and we would like it t
 $$M_{in \, x} + M_{out \, x} = F_{p_{in \, x}} + F_{p_{out \, x}}$$
 
 Such that:
-$M_{x}$ = momentum flowing through the control volume in the x-direction, $\frac{[M][L]}{[T]^2}$
+$M_{x}$ = momentum flowing through the control volume in the x-direction, $\frac{[M][L]}{[T]^2}$  
 $F_{p_x}$ = force due to pressure acting on the boundaries of the control volume in the x-direction, $\frac{[M][L]}{[T]^2}$
 
 
-Recall that momentum is mass times velocity, $mV$, for solid bodies. Since we consider water flowing through a pipe, there is not one singular mass. Instead, there is a mass flow rate, or a mass per time indicated by $\rho Q$. Applying the continuity equation $Q = V A$, we obtain the following equation for the momentum of a fluid flowing through a pipe, $M = \rho V^2 A$. The pressure force is simply the pressure at the centroid of the flow multiplied by the area the pressure is acting upon, $p  A$. To ensure correct sign convention, we will make each side of the equation the negative for reasons discussed shortly. Since $V_{in} > V_{out}$, the left hand side will become $M_{out} - M_{in}$. This very same reduction in velocity causes an increase in pressure from $in$ to $out$, therefore $p_{in} - p_{out}$ will be negative. With these substitutions, the conservation of momentum equation becomes as follows:
+Recall that momentum is mass times velocity, $mV$, for solid bodies. Since we consider water flowing through a pipe, there is not one singular mass. Instead, there is a mass flow rate, or a mass per time indicated by $\rho Q$. Applying the continuity equation $Q = V A$, we obtain the following equation for the momentum of a fluid flowing through a pipe, $M = \rho V^2 A$. The pressure force is simply the pressure at the centroid of the flow multiplied by the area the pressure is acting upon, $p  A$. To ensure correct sign convention, we will make each side of the equation negative for reasons discussed shortly. Since $V_{in} > V_{out}$, the left hand side becomes negative by subtracting $M_{in}$ from $M_{out}$, $M_{out} - M_{in}$. The reduction in velocity from $in$ to $out$ causes an increase in pressure, therefore $p_{in} - p_{out}$ will be negative. With these substitutions, the conservation of momentum equation becomes as follows:
 
 $$\rho V_{out}^2 A_{out} - \rho V_{in}^2 A_{in} = p_{in} A_{out} - p_{out} A_{out}$$
 
-Note that the area attached to $p_{in}$ is $A_{out}$ instead of $A_{in}$, as one might think. **I NEVER ACTUALLY UNDERSTOOD WHY THIS IS, ANY TAKERS???**
+Note that the area term attached to $p_{in}$ is actually $A_{out}$ instead of $A_{in}$, as one might think. **I NEVER ACTUALLY UNDERSTOOD WHY THIS IS, ANY TAKERS???**
 
 By dividing the whole equation by $A_{out} \rho g$, we obtain the following equation, which contains the very same pressure term as our adjusted energy equation above. This is why we chose a negative sign convention.
 
 $$\frac{p_{in} - p_{out}}{\rho g} = \frac{V_{out}^2 - V_{in}^2 \frac{A_{in}}{A_{out}}}{g}$$
 
-Now, we combine the energy equation, momentum equation, and continuity equation:
+Now, we combine the energy, momentum, and continuity equations:
 
 $$ {\rm{Energy \, equation:}} \,\,\,  h_e = \frac{p_{in} - p_{out}}{\rho g} + \frac{V_{in}^2 - V_{out}^2}{2g}$$  
 
@@ -45,7 +46,7 @@ To obtain an equation for minor losses with just two variables, $V_{in}$ and $V_
 
 $$ h_e = \frac{V_{out}^2 - V_{in}^2\frac{V_{out}}{V_{in}}}{g} + \frac{V_{in}^2 - V_{out}^2}{2g}$$
 
-To combine the two terms, the numerator and denominator of the first term, $\frac{V_{out}^2 - V_{in}^2\frac{V_{out}}{V_{in}}}{g}$ will be multiplied by $2$. The equation then becomes:
+To combine the two terms, the numerator and denominator of the first term, $\frac{V_{out}^2 - V_{in}^2\frac{V_{out}}{V_{in}}}{g}$ will be multiplied by $2$ to become $\frac{2 V_{out}^2 - 2 V_{in}^2\frac{V_{out}}{V_{in}}}{2 g}$. The equation then looks like:
 
 $$h_e = \frac{V_{out}^2 - 2 V_{in} V_{out} + V_{in}^2}{2g}$$
 
@@ -58,3 +59,5 @@ From here, the two other forms of the minor loss equation can be derived by solv
 $$ {\rm{ \mathbf{Second \, form:} }} \,\,\, h_e = \frac{V_{in}^2}{2g}{\left( {1 - \frac{A_{in}}{A_{out}}} \right)^2} = \frac{V_{in}^2}{2g} \mathbf{K_e}$$
 
 $$ {\rm{ \mathbf{Third \, form:} }} \,\,\, h_e = \frac{V_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \frac{V_{out}^2}{2g} \mathbf{K_e^{'}}$$
+
+Being familiar with these three forms and how they are used will be of great help throughout the class.
