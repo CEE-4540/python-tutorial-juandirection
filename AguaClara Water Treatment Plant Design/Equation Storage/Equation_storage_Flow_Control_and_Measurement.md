@@ -48,7 +48,7 @@ $$\frac{p_{in} - p_{out}}{\rho g} = \frac{V_{out}^2 - V_{in}^2}{2g} + h_e$$
 ### Head loss due to Sudden Expansion: Conservation of Momentum
 $$\bf{M_1 + M_2 = W + F_{p_1} + F_{p_2} + F_{ss}}$$
 
-$$M_{1x} + M_{2x} = F_{p_{1x}} + F_{p_{2x}}$$
+$$M_{in \, x} + M_{out \, x} = F_{p_{in \, x}} + F_{p_{out \, x}}$$
 
 $$M_{1x} =  - \rho V_{in}^2 A_{in}$$
 
