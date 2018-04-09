@@ -1,12 +1,12 @@
 # Flow Control and Measurement Summary Sheet
-Welcome to the first summary sheet of CEE 4540! These documents will serve as guides and references for you throughout the semester. Since Professor Monroe's class time is limited, so too is the amount of material he can fit on the slides while ensuring that they remain understandable. Thus, these summary sheets will supplement the powerpoints by going into further detail on the course concepts introduced in the slides.
+Welcome to the first summary sheet of CEE 4540! These documents will be guides and references for you throughout the semester. Since Professor Monroe's class time is limited, so too is the amount of material he can fit on the slides while ensuring that they remain understandable. Thus, these summary sheets will supplement the powerpoints by going into further detail on the course concepts introduced in the slides.
 
 Equations, universal constants, and other helpful goodies can be found in the [aide_design repository on GitHub](https://github.com/AguaClara/aide_design/tree/master/aide_design "aide_design"). Most equations and constants you find in these summary sheets will already have been coded into aide_design, and will be shown here in the following format:  
 
 Variable: `pc.gravity`  
 Function: `pc.area_circle(DiamCircle)`.
 
-The letters before the `.` and actual variable or function call, in this case `pc`, indicate the file within aide_design where the variable or function can be found. In the examples above, `pc.gravity` and `pc.area_circle(DiamCircle)` show that the variable `gravity` and function `area_circle(DiamCicle)` are located inside the physchem.py (pc) file.  
+The letters before the `.` and actual variable or function call, in this case `pc`, indicate the file within aide_design where the variable or function can be found. In the examples above, `pc.gravity` and `pc.area_circle(DiamCircle)` show that the variable `gravity` and function `area_circle(DiamCicle)` are located inside the physchem.py (pc) file. You are heavily, strongly, *tremendously* recommended to look up any aide_design equations you plan to use within in their aide_design file before using them; you will find a description detailing what the specific conditions are to using any equation.
 
 Unless otherwise specified, [hyperlinks in these documents will be supplementary](http://likethis.com/ "This link does not go anywhere"). The information contained in the linked external sites is there in case you don't feel completely comfortable with a concept, but is not necessary to learn thoroughly and will not be tested.
 
@@ -37,14 +37,16 @@ If you wish to review fluid mechanics in (much) more detail, please refer to [th
 5. Turbulent
 6. Moody Diagram
 7. Viscosity
+8. Vena Contracta/Coefficient of Contraction
 
 ### Important Equations
 1. Bernoulli equation
 2. Energy equation
-3. Orifice equation
-4. Darcy-Weisbach equation
-5. Reynolds number
-6. Swamee-Jain equation
+3. Darcy-Weisbach equation
+4. Reynolds number
+5. Swamee-Jain equation
+6. Hagen-Poiseuille equation
+7. Orifice equation
 
 ### 1.1) The Bernoulli and Energy Equations
 #### The Bernoulli Equation
@@ -69,15 +71,20 @@ Going back to the Bernoulli equation, the $\frac{p}{\rho g}$ term is called the 
 ![Anyone getting this?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Different%20forms%20of%20head.jpg?raw=true)
 
 
-##### **Assumptions behind the Bernoulli equation**
+**Assumptions behind the Bernoulli equation**  
+
 Unfortunately, the Bernoulli equation is an approximation of reality and is therefore not applicable in all circumstances. The assumptions and conditions necessary to make the Bernoulli equation applicable are as follows:
 
 1. Steady Flow. Bernoulli should not be used during periods in which the flow condition is changing, such as when turning a pump on or off, before the flow has equilibrated.
+
 2. Incompressible flow. Meaning that the density of the fluid does not change throughout the streamline over which the Bernoulli equation is being applied.
+
 3. Flow along a streamline. The Bernoulli equation applies to two or more varying positions of the *same parcel of water*. It is saying that the energy of this parcel is conserved throughout its flow path, and is simply being transferred between pressure, elevation, and velocity. The flow path of any given parcel of water is called its [**streamline**](https://en.wikipedia.org/wiki/Streamlines,_streaklines,_and_pathlines "Streamline wikipedia"). Since the Bernoulli equation compares two positions of the same parcel of water, it can only be applied at different points across that particle's streamline.
+
 4. No energy gain or loss. The Bernoulli equation assumes that the energy of the parcel of water being followed is not changing. This means that there are negligible losses to friction (due to the assumption that viscosity may be ignored), negligible changes in temperature, and no work being done on the fluid throughout the streamline.  
 
-##### **Example problems**
+**Example problems**
+
 [Here is a worksheet with very straightforward example problems using the Bernoulli equation.](https://www.teachengineering.org/content/cub_/lessons/cub_bernoulli/cub_bernoulli_lesson01_bepworksheetas_draft4_tedl_dwc.pdf "Bernoulli worksheet") Note that the solutions use the pressure-form of the Bernoulli equation. This form of the equation does not affect the solution it is used for.
 
 #### The Energy Equation
@@ -92,7 +99,7 @@ $$\frac{p_{1}}{\rho g} + z_{1} + \frac{V_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{
 **This is the form of the energy equation that you will see over and over again in CEE 4540.** To summarize, the main difference between the Bernoulli equation and the energy equation for the purposes of this class is energy loss. The energy equation accounts for the fluid's loss of energy over time while the Bernoulli equation does not. So how can the fluid lose energy?
 
 ### 1.2) Head Loss
-**Head (L)oss**, $h_L$ is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through time and space. There are two components to head loss: major losses caused by pipe-fluid (f)riction, $h_f$, and minor losses caused by flow (e)xpansions, $h_e$, such that $h_L = h_f + h_e$.
+**Head (L)oss**, $h_L$ is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through time and space. There are two components to head loss: major losses caused by pipe-fluid (f)riction, $h_{\rm{f}}$, and minor losses caused by flow (e)xpansions, $h_e$, such that $h_L = h_{\rm{f}} + h_e$.
 
 #### Major Losses
 These losses are the result of friction between the fluid and the surface over which the fluid is flowing, defined as [shear](https://en.wikipedia.org/wiki/Shear_force "Shear wikipedia"). For the purposes of this class, we will only deal with major losses in pipes. However, it is helpful to consider the following example when trying to understand major losses: imagine, as you have so often in physics class, pushing a large box across the ground. Friction is what resists your efforts to push the box. The farther you push the box, the more energy you expend pushing against friction. The same is true for water moving through a pipe, where water is analogous to the box to be moved, the pipe is the floor that provides the friction, and the major losses of the water is analogous to the energy you expend pushing the box.
@@ -108,7 +115,7 @@ Substituting the continuity equation $Q = VA$ in the form of $V^2 = \frac{16Q^2}
 $$h_{\rm{f}} \, = \,{\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}$$
 
 Such that:  
-$h_f$ = major loss, $[L]$  
+$h_{\rm{f}}$ = major loss, $[L]$  
 $\rm{f}$ = Darcy friction factor, dimensionless   
 $L$ = pipe length, $[L]$  
 $Q$ = pipe flow rate, $\frac{[L]^3}{[T]}$  
@@ -130,7 +137,7 @@ $V$ = fluid velocity $\frac{[L]}{[T]}$
 $\nu$ = fluid kinematic viscosity, $\frac{[L]^2}{[T]}$    
 $\mu$ = fluid dynamic viscosity, $\frac{[M]}{[L][T]}$  
 
-**Function in aide_design:** `pc.re_pipe(FlowRate, Diam, Nu)` Returns the Reynolds number *in a circular pipe*. Functions for finding the Reynolds number through other conduits and geometries can also be found in physchem.py within aide_design.
+**Function in aide_design:** `pc.re_pipe(FlowRate, Diam, Nu)` Returns the Reynolds number *in a circular pipe*. Functions for finding the Reynolds number through other conduits and geometries can also be found in [physchem.py](https://github.com/AguaClara/aide_design/blob/master/aide_design/physchem.py) within aide_design.
 
 [There is a transition between laminar and turbulent flow which is not yet well understood](https://en.wikipedia.org/wiki/Laminar%E2%80%93turbulent_transition "Transitional flow wikipedia"). To simplify this phenomenon and make it possible to code for laminar or turbulent flow, we will assume that the transition Reynolds occurs at $\rm{Re}$ = 2100. The flow regime is assumed to be laminar below this value and turbulent above it. This variable is coded into aide_design as `pc.RE_TRANSITION_PIPE`.
 
@@ -148,6 +155,20 @@ $D$ = pipe diameter, $[L]$
 
 **Function in aide_design:** `pc.fric(FlowRate, Diam, Nu, PipeRough)` Returns $\rm{f}$ for laminar *or* turbulent flow. For laminar flow, use '0' for the `PipeRough` input.
 
+The simplicity of the equation for $\rm{f}$ during laminar flow allows for substitutions to create a very useful, simplified equation for major losses during laminar flow. This simplification combines the Darcy-Weisbach equation, the Darcy friction factor during laminar flow, and the Reynold's number formula:
+
+$$h_{\rm{f}} \, = \,{\rm{f}} \frac{8}{g \pi^2} \frac{LQ^2}{D^5}$$
+
+$${\rm{f}} = \frac{64}{\rm{Re}}$$
+
+$${\rm{Re}}=\frac{4Q}{\pi D\nu}$$
+
+To form the **Hagen-Poiseuille equation** for major loss during laminar flow, and *only* during laminar flow:
+
+$$h_{\rm{f}} = \frac{128\mu Q}{\rho g\pi D^4}$$
+
+The significance of this equation lies in its relationship between $h_{\rm{f}}$ and $Q$. Hagen-Poiseuille shows that the terms are directly proportional during laminar flow, while Darcy-Weisbach shows that $h_{\rm{f}}$ grows with the square of $Q$ during turbulent flow. As you will soon see, minor losses, $h_e$, will grow with the square of $Q$ in both laminar and turbulent flow. This has implications that will be discussed later, in the flow control section.
+
 In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gathered by many people, on the Darcy-Weisbach friction factor to create what we now call the [**Moody diagram**](https://en.wikipedia.org/wiki/Moody_chart "Moody wikipedia"). This diagram has the friction factor $\rm{f}$ on the left-hand y-axis, relative pipe roughness $\frac{\epsilon}{D}$ on the right-hand y-axis, and Reynolds number $\rm{Re}$ on the x-axis. The Moody diagram is an alternative to computational methods for finding $\rm{f}$.
 
 
@@ -156,7 +177,7 @@ In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gat
 
 #### Minor Losses
 
-Unfortunately, there is no simple 'box across the ground' example to explain minor losses. So instead, consider certain components of a [hydraulic jump](https://www.youtube.com/watch?v=5spXXZX55C8 "What an amazingly made video, but sorry for the 3310 PTSD"). In the video, you can see a great deal of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The vigorous mixing of the water in the transition region of the hydraulic jump results in a great deal of friction *between water and water* (the measure of a fluid's resistance to internal friction is called [**viscosity**](https://en.wikipedia.org/wiki/Viscosity "Viscosity wikipedia")). This turbulent eddy-induced internal friction results in minor losses, much like fluid-pipe friction results in major losses.
+Unfortunately, there is no simple 'pushing box across the ground' example to explain minor losses. So instead, consider certain components of a [hydraulic jump](https://www.youtube.com/watch?v=5spXXZX55C8 "What an amazingly made video, but sorry for the 3310 PTSD"). In the video, you can see a great deal of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The vigorous mixing of the water in the transition region of the hydraulic jump results in a great deal of friction *between water and water* (the measure of a fluid's resistance to internal friction is called [**viscosity**](https://en.wikipedia.org/wiki/Viscosity "Viscosity wikipedia")). This turbulent eddy-induced internal friction results in minor losses, much like fluid-pipe friction results in major losses.
 
 As is the case in a hydraulic jump, a flow expansion (from shallow flow to deep flow) creates the turbulent eddies that result in minor losses. This will be a recurring theme in throughout the course: _**minor losses are caused by flow expansions**_. Imagine a pipe fitting that connects a small diameter pipe to a large one. The flow must expand to fill up the entire large diameter pipe. This expansion creates turbulent eddies near the union between the small and large pipes, and these eddies cause minor losses. You may already know the equation for minor losses, but understanding where it comes from is very important for effective AguaClara plant design. For this reason, you are strongly recommended to read through the full derivation, which can be found [here](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Minor_Loss_Equation_Derivation.md "Remember to check this link").
 
@@ -168,17 +189,57 @@ $$ {\rm{ \mathbf{Second \, form:} }} \,\,\, h_e = \frac{V_{in}^2}{2g}{\left( {1 
 
 $$ {\rm{ \mathbf{Third \, form:} }} \,\,\, h_e = \frac{V_{out}^2}{2g}{\left( {\frac{A_{out}}{A_{in}}} -1 \right)^2} = \,\,\,\, \frac{V_{out}^2}{2g} \mathbf{K_e^{'}}$$
 
-The $in$ and $out$ in the three forms refer to the diagram that was used for the derivation:
+Such that:  
+$K_e, \,\, K_e^{'}$ = minor loss coefficients, dimensionless
+
+**Function in aide_design:**   
+`pc.headloss_exp_general(Vel, KMinor)` Second and third forms, ambiguous velocity and minor loss coefficient. It is up to the programmer to use consistent $V$ and $K_e$. Returns $h_e$
+`pc.headloss_exp(FlowRate, Diam, KMinor)` Uses third form, $K_e^{'}$. Returns $h_e$.
+
+
+The $in$ and $out$ subscripts in each of the three forms refer to the diagram that was used for the derivation:
 
 ![I really don't think anyone can read this](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Minor%20loss%20pipe.jpg?raw=true)
 
+The second and third forms are the ones with which you are most likely familiar. The distinction between them, however, is critical. First, consider the magnitudes of $A_{in}$ and $A_{out}$. $A_{in}$ can never be larger than $A_{out}$, because we are working with a flow expansion. If flow expands, it follows that the cross-sectional area it flows through increases. As a result, $\frac{A_{out}}{A_{in}} > 1$ and $\frac{A_{in}}{A_{out}} < 1$ must always be true. This means that $K_e$ can never be greater than 1, while $K_e^{'}$ can.
+
+If you have taken CEE 3310, you have seen tables of minor loss coefficients [like this one](https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html "engineeringtoolbox is the best site ever"), and they almost all have coefficients greater than 1. This implies that these tables use the third form of the minor loss equation as we have defined it, where the velocity is $V_{out}$. There is a good reason for using the third form over the second one. Imagine flow through a pipe elbow. The $in$ point for the elbow when considering minor losses is the point at which the flow has maximally contracted, just around the bend, while the $out$ point occurs when the flow has expanded to the entirety of the pipe area. It quite easy to find $V_{out}$, as it is the flow through the pipe divided by the area of the pipe. Finding $V_{in}$ is much more difficult, since the area of the flow contraction is not obvious. This is why **most times you see the minor loss equation, it will be in the third form written above.**  You should confirm this before using the minor loss equation to save yourself and the TAs a head ache.
+
+
+
 ### 1.3) The Orifice Equation
+
+This equation is one that you'll see again and again throughout this class. Thus, understanding it thoroughly will be greatly beneficial in aiding your understanding of future concepts, derivations, and equations.
 
 $$Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}$$
 
-This equation is one that you'll see again and again throughout this class. Thus, understanding where it comes from early on will be greatly beneficial in aiding your understanding of future concepts, derivations, and equations.
+Such that:  
+$\Pi_{vc}$ = 0.62 = vena contracta coefficient, in aide_design as `pc.RATIO_VC_ORIFICE`  
+$A_{or}$ = orifice area- NOT contracted flow area  
+$\Delta h$ = elevation difference between orifice and water level
 
-### Purpose
-The orifice equation relates the flow out of an orifice, $Q$ to the height of the water above the orifice $\Delta h$.
+**Equations in aide_design:**  
+`pc.flow_orifice(Diam, Height, RatioVCOrifice)` Returns flow through a horizontal orifice.  
+`pc.flow_orifice_vert(Diam, Height, RatioVCOrifice)` Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.
+
 
 ![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Hole%20in%20a%20bucket.jpg?raw=true)
+
+#### Purpose
+The orifice equation relates the flow out of an orifice, $Q$ to the height of the water above the orifice $\Delta h$.
+
+
+
+### 1.4) Section Summary
+1. **Bernoulli vs Energy equations:** The Bernoulli equation assumes that energy is conserved. The Energy equation assumes that there is energy loss, or head loss $h_L$. This head loss is composed of major losses, $h_{\rm{f}}$, and minor losses, $h_e$.
+
+2. **Major losses:** Defined as the energy loss due to shear between the walls of the pipe/flow conduit and the fluid. The Darcy-Weisbach equation is used to find major losses in both laminar and turbulent flow regimes. The equation for finding the Darcy friction factor, $\rm{f}$, changes depending on whether the flow is laminar or turbulent. The Moody diagram is a common graphical method for finding $\rm{f}$.
+
+3. **Minor losses:** Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients ($K_e$ vs $K_e^{'}$) and velocities ($V_{in}$ vs $V_{out}$). Make sure the coefficient you select is consistent with the velocity you use.
+
+4. **Major and Minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect head loss, it is even more important for this class to understand exactly how flow will affect head loss. As the table below shows, head loss will always be proportional to flow squared during turbulent flow. During laminar flow, however, it depends on the proportion of losses attributed to each form.
+
+|   Head loss scales with:  | Major Losses | Minor Losses |
+|:-------------------------:|:------------:|:------------:|
+|          Laminar          |     $Q$      |    $Q^2$     |
+|          Turbulent        |    $Q^2$     |    $Q^2$     |
