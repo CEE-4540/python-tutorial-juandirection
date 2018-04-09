@@ -209,7 +209,14 @@ If you have taken CEE 3310, you have seen tables of minor loss coefficients [lik
 
 ### 1.3) The Orifice Equation
 
-This equation is one that you'll see again and again throughout this class. Thus, understanding it thoroughly will be greatly beneficial in aiding your understanding of future concepts, derivations, and equations.
+This equation is one that you'll see again and again throughout this class. Understanding it now will be very helpful as future concepts will use and build on this equation. It is derived from the Bernoulli equation as applied to the red points in the following image:
+
+![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Hole%20in%20a%20bucket.jpg?raw=true)
+
+At the first point, at the top of the bucket in the image, the pressure is atmospheric and the instantaneous velocity is negligible as the water level in the bucket drops. At the second, right-most point, the pressure is also atmospheric, the elevation is at the reference of 0, and the velocity is what we are trying to find. With these simplifications ($p_1 = V_1 = p_2 = z_2 = 0$), the Bernoulli equation becomes:
+
+$${z_1} = \frac{V_2^2}{2g}$$
+
 
 $$Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}$$
 
@@ -223,7 +230,7 @@ $\Delta h$ = elevation difference between orifice and water level
 `pc.flow_orifice_vert(Diam, Height, RatioVCOrifice)` Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.
 
 
-![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Hole%20in%20a%20bucket.jpg?raw=true)
+![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Vertical%20and%20Horizontal%20Orifices.jpg?raw=true)
 
 #### Purpose
 The orifice equation relates the flow out of an orifice, $Q$ to the height of the water above the orifice $\Delta h$.
