@@ -17,9 +17,13 @@ Unless otherwise specified, [hyperlinks in these documents will be supplementary
 ## Table of Contents
 Please use this table to control/command find the sections you are looking for.
 
-#### Section 1: Fluids Review
-1.1) The Bernoulli and Energy Equations   
-1.2) Minor and Major Losses  
+#### **Section 1: Fluids Review**
+1.1) The Bernoulli and Energy Equations  
+  - The Bernoulli Equation
+  - The Energy Equation
+1.2) Head Loss  
+  - Major Losses
+  - Minor Losses
 1.3) The Orifice Equation
 
 ---
@@ -49,7 +53,7 @@ If you wish to review fluid mechanics in (much) more detail, please refer to [th
 7. Orifice equation
 
 ### 1.1) The Bernoulli and Energy Equations
-#### The Bernoulli Equation
+#### **The Bernoulli Equation**
 As explained in CEE 3310 with more details than most of you wanted to know, the Bernoulli and energy equations are incredibly useful in understanding the transfer of the fluid's energy throughout a streamline or through a control volume. This energy has three forms: pressure, potential (deriving from elevation), and kinetic (deriving from velocity). These three forms make up the Bernoulli equation:
 
 $$\frac{p_1}{\rho g} + {z_1} + \frac{V_1^2}{2g} = \frac{p_2}{\rho g} + {z_2} + \frac{V_2^2}{2g}$$
@@ -87,7 +91,7 @@ Unfortunately, the Bernoulli equation is an approximation of reality and is ther
 
 [Here is a worksheet with very straightforward example problems using the Bernoulli equation.](https://www.teachengineering.org/content/cub_/lessons/cub_bernoulli/cub_bernoulli_lesson01_bepworksheetas_draft4_tedl_dwc.pdf "Bernoulli worksheet") Note that the solutions use the pressure-form of the Bernoulli equation. This form of the equation does not affect the solution it is used for.
 
-#### The Energy Equation
+#### **The Energy Equation**
 This 4th assumption stated above represents the key difference between the Bernoulli equation and the energy equation for the purpose of this class. The energy equation accounts for the (L)oss of energy from both the fluid flowing, $h_L$, and the charging of a (T)urbine, $h_T$, as well as energy gain provided by a (P\)ump, $h_P$.
 
 $$\frac{p_{1}}{\rho g} + z_{1} + \alpha_{1} \frac{V_{1}^2}{2g} + h_P = \frac{p_{2}}{\rho g} + z_{2} + {\alpha_{2}} \frac{V_{2}^2}{2g} + h_T + h_L$$
@@ -101,7 +105,7 @@ $$\frac{p_{1}}{\rho g} + z_{1} + \frac{V_{1}^2}{2g} = \frac{p_{2}}{\rho g} + z_{
 ### 1.2) Head Loss
 **Head (L)oss**, $h_L$ is a term that is ubiquitous in both this class and fluid mechanics in general. Its definition is exactly as it sounds: it refers to the loss of energy of a fluid as it flows through time and space. There are two components to head loss: major losses caused by pipe-fluid (f)riction, $h_{\rm{f}}$, and minor losses caused by flow (e)xpansions, $h_e$, such that $h_L = h_{\rm{f}} + h_e$.
 
-#### Major Losses
+#### **Major Losses**
 These losses are the result of friction between the fluid and the surface over which the fluid is flowing, defined as [shear](https://en.wikipedia.org/wiki/Shear_force "Shear wikipedia"). For the purposes of this class, we will only deal with major losses in pipes. However, it is helpful to consider the following example when trying to understand major losses: imagine, as you have so often in physics class, pushing a large box across the ground. Friction is what resists your efforts to push the box. The farther you push the box, the more energy you expend pushing against friction. The same is true for water moving through a pipe, where water is analogous to the box to be moved, the pipe is the floor that provides the friction, and the major losses of the water is analogous to the energy you expend pushing the box.
 
 Fortunately for us, Henry Darcy and Julius Weisbach came up with a handy equation to determine the major losses in a pipe _under both [**laminar**](https://en.wikipedia.org/wiki/Laminar_flow "Laminar flow wikipedia") and [**turbulent**](https://en.wikipedia.org/wiki/Turbulence "Turbulent flow wikipedia") flow_. Their equation is logically but unoriginally named the [**Darcy-Weisbach equation**](https://en.wikipedia.org/wiki/Darcy%E2%80%93Weisbach_equation "Darcy-Weisbach wikipedia"):
@@ -175,7 +179,7 @@ In 1944, Lewis Ferry Moody plotted a ridiculous amount of experimental data, gat
 ![Moody doody](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Moody.jpg?raw=true)
 
 
-#### Minor Losses
+#### **Minor Losses**
 
 Unfortunately, there is no simple 'pushing box across the ground' example to explain minor losses. So instead, consider certain components of a [hydraulic jump](https://www.youtube.com/watch?v=5spXXZX55C8 "What an amazingly made video, but sorry for the 3310 PTSD"). In the video, you can see a great deal of turbulence and eddies in the transition region between the fast, shallow flow and the slow, deep flow. The vigorous mixing of the water in the transition region of the hydraulic jump results in a great deal of friction *between water and water* (the measure of a fluid's resistance to internal friction is called [**viscosity**](https://en.wikipedia.org/wiki/Viscosity "Viscosity wikipedia")). This turbulent eddy-induced internal friction results in minor losses, much like fluid-pipe friction results in major losses.
 
@@ -203,9 +207,17 @@ The $in$ and $out$ subscripts in each of the three forms refer to the diagram th
 
 The second and third forms are the ones with which you are most likely familiar. The distinction between them, however, is critical. First, consider the magnitudes of $A_{in}$ and $A_{out}$. $A_{in}$ can never be larger than $A_{out}$, because we are working with a flow expansion. If flow expands, it follows that the cross-sectional area it flows through increases. As a result, $\frac{A_{out}}{A_{in}} > 1$ and $\frac{A_{in}}{A_{out}} < 1$ must always be true. This means that $K_e$ can never be greater than 1, while $K_e^{'}$ can.
 
-If you have taken CEE 3310, you have seen tables of minor loss coefficients [like this one](https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html "engineeringtoolbox is the best site ever"), and they almost all have coefficients greater than 1. This implies that these tables use the third form of the minor loss equation as we have defined it, where the velocity is $V_{out}$. There is a good reason for using the third form over the second one. Imagine flow through a pipe elbow. The $in$ point for the elbow when considering minor losses is the point at which the flow has maximally contracted, just around the bend, while the $out$ point occurs when the flow has expanded to the entirety of the pipe area. It quite easy to find $V_{out}$, as it is the flow through the pipe divided by the area of the pipe. Finding $V_{in}$ is much more difficult, since the area of the flow contraction is not obvious. This is why **most times you see the minor loss equation, it will be in the third form written above.**  You should confirm this before using the minor loss equation to save yourself and the TAs a head ache.
 
+If you have taken CEE 3310, you have seen tables of minor loss coefficients [like this one](https://www.engineeringtoolbox.com/minor-loss-coefficients-pipes-d_626.html "engineeringtoolbox is the best site ever"), and they almost all have coefficients greater than 1. This implies that these tables use the third form of the minor loss equation as we have defined it, where the velocity is $V_{out}$. There is a good reason for using the third form over the second one. Imagine flow through a pipe elbow. The $in$ point for the elbow when considering minor losses is the point at which the flow has maximally contracted, just around the bend, while the $out$ point occurs when the flow has expanded to the entirety of the pipe area. It quite easy to find $V_{out}$, as it is the flow through the pipe divided by the area of the pipe. Finding $V_{in}$ is much more difficult, since the area of the flow contraction is not obvious. This is why **most times you see the minor loss equation, it will be in the third form written above.** Despite this, you should always double check to which form is being used and that the $K$ and $V$ values you input are consistent with the form and each other.
 
+**Conceptual Example**  
+Imagine water flowing through a pipe elbow, as depicted in the image below.
+
+![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Minor%20loss%20elbow.jpg?raw=true)
+
+$$h_e = K_e^{'} \frac{V_{out}^2}{2g}$$
+
+If you intend to use the ubiquitous third form of the minor loss equation, you must know $V_{out}$. But which point is $out$ and which point is $in$? A simple way to distinguish the two is that $in$ is when the flow is most contracted, and $out$ is when the flow has fully expanded after that maximal contraction. Going on these guidelines, point 'B' above would be $in$, since it represents the most contracted flow in the elbow/pipe system. Therefore point 'C' would be $out$, as at point 'C,' the flow has fully expanded after its compression in 'B.'
 
 ### 1.3) The Orifice Equation
 
@@ -232,7 +244,7 @@ $\Delta h$ = elevation difference between orifice and water level
 
 ![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Vertical%20and%20Horizontal%20Orifices.jpg?raw=true)
 
-#### Purpose
+#### **Purpose**
 The orifice equation relates the flow out of an orifice, $Q$ to the height of the water above the orifice $\Delta h$.
 
 
