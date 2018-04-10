@@ -29,7 +29,7 @@ $${\rm{Re}}=\frac{4Q}{\pi D\nu} = \frac{\rho VD}{\mu} = \frac{VD}{\nu}$$
 $$\rm{f} = \frac{64}{Re}$$
 
 
-$$h_{\rm{f}} = \frac{32\mu LV}{\rho gD^2} = \frac{128\mu LQ}{\rho g\pi D^4}$$
+$$h_{\rm{f}} = \frac{32\mu L V}{\rho gD^2} = \frac{128\mu Q}{\rho g\pi D^4}$$
 
 $${\rm{f}} = \frac{0.25} {\left[ \log \left( \frac{\epsilon }{3.7D} + \frac{5.74}{{\rm Re}^{0.9}} \right) \right]^2}$$
 
