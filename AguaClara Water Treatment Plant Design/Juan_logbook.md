@@ -3,11 +3,11 @@
 This file will contain weekly updates into my work. All changes will be pushed to a non-master branch, and I will only have one branch at a time for whatever project I am working on. Every week (the day depends on my work schedule that week), I will send Monroe an email containing a link to this file's page on GitHub in addition to supplementary material. For example, this first week I will send him the example of the 'extra' slides for his viewing pleasure (or displeasure).
 
 ***
-##List of Ideas and Concerns
+##List of Big Ideas and Big Concerns
 1. It is not ideal to have both a confluence and a GitHub page that contain course resources. This will confuse students very much, they will be unable to find or unwilling to look for the simple things, and they will pester the TAs.  
 **Ambitious idea: Move everything to GitHub**  
-Confluence, in all its glory, is not well liked by students and has a tendency to get very messy. Despite the fact that it seems like the perfect tool, I've only every heard complaints from student, both in AguaClara and 4540.
-    - This is a huge task.
+Confluence, in all its glory, is not well liked by students and has a tendency to get very messy. Despite the fact that it seems like the perfect tool, I've only every heard complaints from students, both in AguaClara and 4540. Documents and information are oftentimes difficult to find
+    - Is it possible to make a good looking syllabus on GitHub? Will investigate. Shouldn't be too difficult with table functionality in markdown
 2.
 
 ***
@@ -112,4 +112,12 @@ For the following presentations, let me know what slides you want to be consider
 5. Solicit feedback from people on the cheat sheet.
 
 ***
-## Fifth Progress Report: 4/???/2018
+## Fifth Progress Report: 4/12/2018
+### Done
+1. Finished first drafts of [minor loss equation derivation](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Derivation_minor_loss_equation.md "Minor loss equation derivation document") and [flow through a simple hypochlorinator](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Derivation_flow_through_simple_hypoclorinator.md).
+2. Finished Fluids Review in `Flow Control and Measurement.md` summary sheet first draft. Sent it out to Fletcher and Clare to look over and provide feedback.
+3. Edited `Flow Control and Measurement.pptx` slides up to slide 33. Eliminated derivations, removed clutter from slides. Will send out new version for review.
+
+### To Do
+1. Find a good site to link to 'head.'
+2. Keep going. Review feedback from Fletcher and Clare when they respond. Begin on Section 2 'Introduction to Flow Control: The Search for Constant Head.'
