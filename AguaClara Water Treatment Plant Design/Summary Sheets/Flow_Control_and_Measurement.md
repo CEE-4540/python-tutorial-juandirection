@@ -12,21 +12,44 @@ For the most part, [hyperlinks in these documents will contain supplementary inf
 
 **SHOULD I WRITE SOMETHING ABOUT THE STRUCTURE OF THE SUMMARY  SHEETS HERE? I'M STILL NOT EXACTLY SURE WHAT THE STRUCTURE SHOULD BE**
 
+<br>
+<br>
+
+
 ---
+
+<br>
+<br>
 
 ## Table of Contents
 Please use this table to control/command find the sections you are looking for.
 
 #### **Section 1: Fluids Review**
-1.1) The Bernoulli and Energy Equations  
-  - The Bernoulli Equation
-  - The Energy Equation  
-1.2) Head Loss  
-  - Major Losses  
-  - Minor Losses  
-1.3) The Orifice Equation
+**1.1)** The Bernoulli and Energy Equations  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;The Bernoulli Equation  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;The Energy Equation  
+**1.2)** Head Loss  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;Minor losses  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;Major losses  
+**1.3)** The Orifice Equation  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;Vena Contracta    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - &nbsp;Origin  
+**1.4)** Section Review
+
+#### **Section 2: Introduction to Flow Controls**  
+**2.1)** Tank with a  valve
+**2.2)** Conventional Flow Control Devices
+**2.3)**
+
+
+<br>
+<br>
+
 
 ---
+
+<br>
+<br>
 
 ## Section 1: Fluids Review
 This section is meant to be a brief refresher on fluid mechanics. It will only cover the topics of fluids mechanics that will be used heavily in the course.
@@ -207,13 +230,17 @@ $V_{out}$ is easy to determine because it is the velocity of the fluid as it flo
 
 ### 1.3) The Orifice Equation
 
-This equation is one that you'll see again and again throughout this class. Understanding it now will be very helpful as future concepts will use and build on this equation.
+This equation is one that you'll see again and again throughout this class. Understanding it now will be invaluable, as future concepts will use and build on this equation.
 
-Before describing the equation, we must first understand the concept of a [**vena contracta**]("Remember to link this"). Refer to the image of flow through a pipe elbow above. The flow contracts as the fluid moves from point 'A' to point 'B.' This happens because the fluid can't make a sharp turn at the corner of the elbow. Instead, the streamline closest to the sharp turn makes a slow, gradual change in direction, as shown in the image. As a result of this gradual turn, the cross-sectional area the fluid is flowing through at point 'B' is less than the cross-sectional area it flows through at points 'A' and 'C'. Written as an equation, $A_{point \, B} < A_{point \, A} = A_{point \, C}$. A vena contracta, $\Pi_{vc}$, is a ratio between the flow area at *maximal* contraction, $A_{point \, B}$, and the flow area *before* contraction, $A_{point \, A}$. In the image above, the equation for the vena contracta would be:
+#### **Vena Contracta**
+
+Before describing the equation, we must first understand the concept of a [**vena contracta**](https://en.wikipedia.org/wiki/Vena_contracta "Vena Contracta wikipedia"). Refer to the image of flow through a pipe elbow above. The flow contracts as the fluid moves from point 'A' to point 'B.' This happens because the fluid can't make a sharp turn at the corner of the elbow. Instead, the streamline closest to the sharp turn makes a slow, gradual change in direction, as shown in the image. As a result of this gradual turn, the cross-sectional area the fluid is flowing through at point 'B' is less than the cross-sectional area it flows through at points 'A' and 'C'. Written as an equation, $A_{point \, B} < A_{point \, A} = A_{point \, C}$. The term 'vena contracta' describes the phenomenon of contracting flow due to streamlines being unable to make sharp turns. $\Pi_{vc}$ is a ratio between the flow area at the vena contracta, $A_{point \, B}$, which is when the flow is *maximally* contracted, and the flow area *before* the contraction, $A_{point \, A}$. In the image above, the equation for the vena contracta coefficient would be:
 
 $$\Pi_{vc} = \frac{A_{point \, B}}{A_{point \, A}}$$  
 
-When the most extreme turn a streamline must make is 90°, the value of the vena contracta is close to 0.62. This parameter is in aide_design as `pc.RATIO_VC_ORIFICE`. Though there are many vena contracta values for different geometries (different turn angles, sharp vs smooth), we will only consider a sharp, 90° turn in this class.
+Note that what this class calls $\Pi_{vc}$ is often referred to as a 'Coefficient of Contraction,' $C_c$, in other engineering courses and settings. When the most extreme turn a streamline must make is 90°, the value of the vena contracta coefficient is close to 0.62. This parameter is in aide_design as `pc.RATIO_VC_ORIFICE`. Though there are many vena contracta coefficient values for different geometries like different turn angles, or sharp vs smooth turns, we will only consider a sharp, 90° turn in this class.
+
+_**A vena contracta coefficient is not a minor loss coefficient.**_ Though the equations for the two both involve contracted and non-contracted areas, these coefficients are not the same. Refer to the flow through a pipe elbow image above. The minor loss coefficient equation uses the areas of points 'B' and 'C,' while the vena contracta coefficient uses the areas of points 'A' and 'B.' Additionally, the equations to calculate the coefficients themselves are not the same. Confusing the two coefficients is common mistake that this paragraph will hopefully help you to avoid.
 
 
 #### **Origin**
@@ -221,10 +248,15 @@ The orifice equation is derived from the Bernoulli equation as applied to the re
 
 ![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Hole%20in%20a%20bucket.jpg?raw=true)
 
-At the point in the top of the bucket, the pressure is atmospheric and the instantaneous velocity is negligible as the water level in the bucket drops. At the second, right-most point, the pressure is also atmospheric, the elevation is at the reference of 0, and the velocity is what we are trying to find. With these simplifications ($p_1 = V_1 = p_2 = z_2 = 0$), the Bernoulli equation becomes:
+At point A, the pressure is atmospheric and the instantaneous velocity is negligible as the water level in the bucket drops slowly. At point B, the pressure is also atmospheric. We define the difference in elevations between the two points, $z_A - z_B$, to be $\Delta h$. With these simplifications ($p_A = V_A = p_B = 0$) and assumptions ($z_A - z_B = \Delta h$), the Bernoulli equation becomes:
 
-$${z_1} = \frac{V_2^2}{2g}$$
+$$\Delta h = \frac{V_B^2}{2g}$$
 
+Substituting the continuity equation $Q = V A$ in the form of $V_B^2 = \frac{Q^2}{A_{vc}^2}$, the vena contracta coefficient in the form of $A_{vc} = \Pi_{vc} A_{or}$ yields:
+
+$$\Delta h = \frac{Q^2}{2g \Pi_{vc}^2 A_{or}^2}$$
+
+Which, rearranged to solve for Q gives **The Orifice Equation:**
 
 $$Q = \Pi_{vc} A_{or} \sqrt{2g\Delta h}$$
 
@@ -240,21 +272,31 @@ $\Delta h$ = elevation difference between orifice and water level
 
 ![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Vertical%20and%20Horizontal%20Orifices.jpg?raw=true)
 
-#### **Purpose**
-The orifice equation relates the flow out of an orifice, $Q$ to the height of the water above the orifice $\Delta h$.
-
-
+There are two configurations for an orifice in the wall of a reservoir of water, horizontal and vertical, as the image above shows. The orifice equation shown in the previous section is for a horizontal orifice, but for a vertical orifice the equation requires integration to return the correct flow. You will explore this in the Flow Control and Measurement Design Challenge.
 
 ### 1.4) Section Summary
-1. **Bernoulli vs Energy equations:** The Bernoulli equation assumes that energy is conserved. The Energy equation assumes that there is energy loss, or head loss $h_L$. This head loss is composed of major losses, $h_{\rm{f}}$, and minor losses, $h_e$.
+1. **Bernoulli vs energy equations:** The Bernoulli equation assumes that energy is conserved throughout a streamline or control volume. The Energy equation assumes that there is energy loss, or head loss $h_L$. This head loss is composed of major losses, $h_{\rm{f}}$, and minor losses, $h_e$.
 
 2. **Major losses:** Defined as the energy loss due to shear between the walls of the pipe/flow conduit and the fluid. The Darcy-Weisbach equation is used to find major losses in both laminar and turbulent flow regimes. The equation for finding the Darcy friction factor, $\rm{f}$, changes depending on whether the flow is laminar or turbulent. The Moody diagram is a common graphical method for finding $\rm{f}$.
 
 3. **Minor losses:** Defined as the energy loss due to the generation of turbulent eddies when flow expands. Once more: minor losses are caused by flow expansions. There are three forms of the minor loss equation, two of which look the same but use different coefficients ($K_e$ vs $K_e^{'}$) and velocities ($V_{in}$ vs $V_{out}$). Make sure the coefficient you select is consistent with the velocity you use.
 
-4. **Major and Minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect head loss, it is even more important for this class to understand exactly how flow will affect head loss. As the table below shows, head loss will always be proportional to flow squared during turbulent flow. During laminar flow, however, it depends on the proportion of losses attributed to each form.
+4. **Major and minor losses vary with flow:** While it is generally important to know how increasing or decreasing flow will affect head loss, it is even more important for this class to understand exactly how flow will affect head loss. As the table below shows, head loss will always be proportional to flow squared during turbulent flow. During laminar flow, however, the exponent on $Q$ will be between 1 and 2 depending on the proportion of major to minor losses.
 
-|   Head loss scales with:  | Major Losses | Minor Losses |
-|:-------------------------:|:------------:|:------------:|
-|          Laminar          |     $Q$      |    $Q^2$     |
-|          Turbulent        |    $Q^2$     |    $Q^2$     |
+| Head loss scales with: | Major Losses | Minor Losses |
+|:----------------------:|:------------:|:------------:|
+|        Laminar         |     $Q$      |    $Q^2$     |
+|       Turbulent        |    $Q^2$     |    $Q^2$     |
+
+5. **Orifice equation and vena contractas:** The orifice equation is used to determine the flow out of an orifice given the elevation of water above the orifice. This equation introduces the concept of a vena contracta, which describes flow contraction due to the inability of streamlines to make sharp turns. The equation shows that the flow out of an orifice is proportional to the square root of the driving head, $Q \propto \sqrt{\Delta h}$
+
+<br>
+<br>
+
+
+---
+
+<br>
+<br>
+
+## Section 2: AguaClara Flow Controller
