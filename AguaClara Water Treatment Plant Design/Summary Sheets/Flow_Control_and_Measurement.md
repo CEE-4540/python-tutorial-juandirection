@@ -265,7 +265,6 @@ $\Delta h$ = elevation difference between orifice and water level
 `pc.flow_orifice(Diam, Height, RatioVCOrifice)` Returns flow through a horizontal orifice.  
 `pc.flow_orifice_vert(Diam, Height, RatioVCOrifice)` Returns flow through a vertical orifice. The height parameter refers to height above the center of the orifice.
 
-
 ![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/Vertical%20and%20Horizontal%20Orifices.jpg?raw=true)
 
 There are two configurations for an orifice in the wall of a reservoir of water, horizontal and vertical, as the image above shows. The orifice equation shown in the previous section is for a horizontal orifice, but for a vertical orifice the equation requires integration to return the correct flow. You will explore this in the Flow Control and Measurement Design Challenge.
@@ -295,4 +294,101 @@ There are two configurations for an orifice in the wall of a reservoir of water,
 <br>
 <br>
 
-## Section 2: AguaClara Flow Controller
+## Section 2: Introduction to Flow Control: The Search for Constant Head   
+
+**Constant head** implies constant flow. It means that water is flowing, but the driving head of the system is not changing. In other words, imagine a bucket, full of water, with a hole in the bottom. The water will leave through the hole with a certain flow rate, and, as the water level in the bucket falls, that flow rate will decrease. Constant head means that the bucket is s
+
+
+Scientists and fluid mechanicians have been searching for devices to provide a constant, continuous flow rate for most of history. Nowadays, programming and pumps have established an easy way to solve this age-old problem, as long as electricity is available. As a seasoned traveler or any humanitarian may tell you, however, consistent electricity is not available to a large portion of the world population. Those same people could also tell you that areas lacking consistent electricity also tend to lack other essential human resources, like consistent access to clean drinking water. A difficult, somewhat perverse challenge arises. The conventional solution to chlorinating and disinfecting incoming water involves programming and pumps, and therefore electricity. However, the places that most need their water disinfected don't have consistent access to electricity.
+
+But what does constant flow rate have to do with [**chlorination**](https://en.wikipedia.org/wiki/Water_chlorination "Chlorination wikipedia")? The answer lies in the dose of chlorine, its ideal concentration in the water. Too much chlorine leads to unpleasant odor, taste, and is a skin irritant **WHAT ELSE DOES TOO MUCH CHLORINE DOO????**. Too little chlorine is ineffective in neutralizing harmful bacteria in the water supply, and may lead to increased levels of disease in the population served by the water supply. Finding the right dose is the key to chlorination, and maintaining that dose is critical to effective chlorination. Therefore, finding a way to consistently administer the ideal dose becomes incredibly important.
+
+This section introduces the problem of creating constant flow rate without electricity and presents some historical solutions.
+
+### Important Terms
+
+1. Constant Head
+2. Chlorination
+3.
+
+### Important Equations
+1. s
+2.
+
+## 2.1) Tank with a Valve  
+As evidenced by the orifice equation, a tank of water with a hole poked in the bottom or side does not provide constant flow. Why not? In the orifice equation, $Q = \Pi_{vc} A_{or} \sqrt{2g \Delta h}$, flow $Q$ is a function of the height of water above the orifice, $\Delta h$. Since the water drains from the hole over time, the height of water above the orifice necessarily changes. The first approach in the search for a constant flow rate is understanding the 'hole-in-a-bucket' system, as it is the most simple way to provide a flow of water. Our goal is to see if we can alter a component of the system to produce either constant or essentially constant head.
+
+The system we are using to gain an understanding of this 'hole-in-a-bucket' scenario is shown below. In the image, a hypochlorite solution is slowly dripping and mixing with piped source water, thereby disinfecting it. The valve is almost closed to make sure that the hypochlorite solution drips instead of flows.
+
+![What does this text do again?](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Images/complete%20hypochlorinator.jpg?raw=true)
+
+Shown  [here](https://github.com/AguaClara/CEE4540_DC/blob/master/AguaClara%20Water%20Treatment%20Plant%20Design/Summary%20Sheets/Derivation_flow_through_simple_hypoclorinator.md "Hypochlorinator derivation"), the derivation yields the following equation:
+
+$$ \frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}$$
+
+Such that:  
+$Q = Q(t)$ = flow of hypochlorite through valve at time $t$   
+$t$ = elapsed time  
+$t_{Design}$ = time it would take for tank to empty if flow stayed constant at $Q_0$, which it does not  
+$h_{Tank}$ = elevation of water level with reference to tank bottom  
+$h_0$ = elevation of water level with reference to the valve  
+**Note:** While the derivation uses a hypochlorinator as an example, we will just consider a bucket of water from now on to avoid saying 'hypochlorite solution' instead of 'water'.
+
+This equation has consistently been a source of confusion for students, and its nuances are thoroughly explained in the derivation. These nuances will be quickly summarized below:
+
+- $t_{Design}$ is **NOT** the time it takes to drain the tank. It is the time that it _would_ take to drain the tank _if_ the flow rate at time $t = 0$, $Q_0$, were the flow rate for the entire time. $t_{Design}$ was used in the derivation to simplify the equation, which is why it exists. The actual time it takes to drain the tank lies somewhere between $t_{Design}$ and $2 \cdot t_{Design}$.
+- $h_{Tank}$ is not the same as $h_{0}$. $h_{Tank}$ is the height of water level in the tank with reference to the tank bottom. $h_{0}$ is the water level in the tank with reference to the valve. Therefore, $h_{0} \geq h_{Tank}$ is true if the valve is located at or below the bottom of the tank. If the tank is elevated far above the valve, then the $h_{0} > > h_{Tank}$. If the valve is at the same elevation as the bottom of the tank, then $h_{0} = h_{Tank}$. Please refer to the image above to clarify $h_{0}$ and $h_{Tank}$. Also note that both $h_{Tank}$ and $h_{0}$ are not variables, they are constants which are defined by the initial state of the system, when the water just begins to flow.
+
+You may have noticed that this is not a hole-in-a-bucket scenario, as there is a valve involved and therefore there are minor losses. If you would like, you may go through the derivation on your own, using the orifice equation instead of the minor loss equation for the first step. If you do so, you'll find that the equation remains almost the same, the only difference is that the $\frac{h_{Tank}}{h_0}$ term drops out for an orifice, as $h_{Tank} = h_0$.
+
+Thanks to the derivation, we have an expression of flow out of the system as a function of time. To complete our understanding, we need another expression for water/solution level as a function of time. Fortunately, this is very easy to find. Both the orifice equation for the hole-in-a-bucket scenario and the minor loss equation for the hypochlorinator-valve scenario have flow that is proportional to the square root of the driving head, $Q \propto h$. We can use this proportionality to come up with an equation relating the height of the water to the flow of water:
+
+$$\frac{Q}{Q_0} = \sqrt{\frac{h}{h_0}}$$
+
+Substituting this equation back into $\frac{Q}{Q_0} = 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0}$, we obtain an equation relating height of water as a function of time.  
+
+$$\frac{h}{h_0} = \left( 1 - \frac{1}{2} \frac{t}{t_{Design}} \frac{h_{Tank}}{h_0} \right)^2$$
+
+Such that:  
+$h$ = $h(t)$ elevation of water level with reference to the the valve.
+
+
+```python
+# import necessary items
+from aide_design.play import*
+import pandas as pd
+
+#define constants
+# h_0 being equal to h_Tank implies that the valve is on the same elevation as the bottom of the tank
+points_time = 100
+h_0 = 1 * u.m
+h_Tank = 1 * u.m
+time_design = 4 * u.day
+
+time_vector = np.linspace(0,8,points_time) * u.day
+
+def hypo_flow_normalized(time, time_design, h_Tank, h_0):
+  Q_norm = 1 - 0.5 * (time/time_design) * (h_Tank/h_0)
+  return Q_norm
+
+def hypo_h_normalized(time, time_design):
+  h_norm = (1 - 0.5 * (time/time_design))**2
+  return h_norm
+
+
+Q_norm = hypo_flow_normalized(time_vector, time_design, h_Tank, h_0)
+
+h_norm = hypo_h_normalized(time_vector, time_design)
+
+plt.plot(time_vector,Q_norm)
+plt.plot(time_vector,h_norm)
+
+plt.legend(['Normalized flow', 'Normalized water depth'])
+plt.xlabel("Time (days)")
+plt.ylabel("Normalized Ratio")
+plt.show()
+
+
+```
+
+###
