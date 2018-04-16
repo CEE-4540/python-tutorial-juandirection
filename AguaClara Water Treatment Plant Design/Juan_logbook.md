@@ -121,3 +121,14 @@ For the following presentations, let me know what slides you want to be consider
 ### To Do
 1. Find a good site to link to 'head.'
 2. Keep going. Review feedback from Fletcher and Clare when they respond. Begin on Section 2 'Introduction to Flow Control: The Search for Constant Head.'
+
+
+
+***
+## Sixth Progress Report: 4/17/2018  
+This interim progress report is due to 2 factors. My family and I are going on vacation from the 18th until the 21st of April, and I will only be able to work a few hours on those days, if at all. On the 17th, the [Green Business Summit 2018](https://events.economist.com/events-conferences/emea/Greenbusinesssummit) is being held two blocks from where I live. I signed up and am going to learn about things and see if I can schmooze with  businessmen and pitch AguaClara. That is why this week will be light on work.
+
+### Done
+1. I need to be a bit more organized and broaden my scope to consider more than just the summary sheets at any given time. One day out of every week, I will look at the class as a whole and see how it can be streamlined.
+2. Is it a problem that we are presumably using the same repo to give subsequent years of students their DCs? Is it possible for them to checkout a previous commit to get the DC solutions from previous years?
+3.
