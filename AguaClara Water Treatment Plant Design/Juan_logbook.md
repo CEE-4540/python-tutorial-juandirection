@@ -129,6 +129,12 @@ For the following presentations, let me know what slides you want to be consider
 This interim progress report is due to 2 factors. My family and I are going on vacation from the 18th until the 21st of April, and I will only be able to work a few hours on those days, if at all. On the 17th, the [Green Business Summit 2018](https://events.economist.com/events-conferences/emea/Greenbusinesssummit) is being held two blocks from where I live. I signed up and am going to learn about things and see if I can schmooze with  businessmen and pitch AguaClara. That is why this week will be light on work.
 
 ### Done
-1. I need to be a bit more organized and broaden my scope to consider more than just the summary sheets at any given time. One day out of every week, I will look at the class as a whole and see how it can be streamlined.
+1. I need to be a bit more organized and broaden my scope to consider more than just the summary sheets at any given time. One day out of every week, I will zoom out of my current project, which will be summary sheets/powerpoints in the near future, and look at the general organization/structure of the class.
 2. Is it a problem that we are presumably using the same repo to give subsequent years of students their DCs? Is it possible for them to checkout a previous commit to get the DC solutions from previous years?
-3.
+    - I think that it is not a huge deal. There are so many ways to cheat in any class if a student tries hard enough. Most students won't have any prior knowledge of github anyways, and will be unlikely to even know this is possible.
+3. I have checked out the possibility of moving everything from confluence to github. Not only is it possible, but it wouldn't even be that difficult. The only concern would be the locations of certain images and files, but that is not a legitimate reason not to do the switch. It would take me 10 hours MAX and probably a lot less. Organizing the file structure on github would be the only tricky part.
+    - I have made the first line of the sample syllabus via a markdown table, you may find it [here](https://github.com/AguaClara/CEE4540_DC/blob/Flow_Control_and_Measurement_v2/Sample_Syllabus.md). The raw file is still a mess exactly like the confluence one, but I believe that is unavoidable. By expanding the atom window/shrinking the text size each row can take up one line, which makes the table begins to look normal and navigable.
+
+### To Do
+1. Umm... everything. Summary sheet making is a slow process if a quality product is desired. Which of course it is.
+2. **Should I begin to make the switch from confluence to github?**
